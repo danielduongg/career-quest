@@ -60,6 +60,7 @@ career-quest/
 - **32 career worlds** with built-in search and category filters, spanning tech, healthcare, engineering, business, design, public service, and the skilled trades.
 - **Quest board** in three tracks — 🔍 Recon, 🤝 Field Work, ⚖️ Reality Check — 9 quests per career.
 - **ROI calculator** that turns cost, aid, and salary into debt, monthly payments, and payback time.
+- **Step-by-step roadmap** for every career — five clear stages from high school to landing the job.
 - **Simulated mentors** (day-in-the-life) **plus** a directory to meet *real* professionals.
 - **XP, levels, and 6 badges**; progress saves locally in the browser.
 - **Zero dependencies, zero build step, zero tracking.** One HTML file.
