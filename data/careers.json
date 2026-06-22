@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "note": "Salary figures are illustrative U.S. national medians from the BLS Occupational Outlook Handbook (May 2024). They are starting points for conversation, NOT guarantees. Verify current local numbers via each career's BLS link.",
+    "note": "Salary figures are illustrative U.S. national medians from the BLS Occupational Outlook Handbook (May 2024). They are starting points for conversation, NOT guarantees. Verify current local numbers via each career's BLS link. Each career includes a step-by-step roadmap from high school to landing the job.",
     "source": "https://www.bls.gov/ooh/",
     "lastReviewed": "2026-06",
     "count": 32
@@ -57,7 +57,29 @@
         "loved": "Building something and watching thousands use it the next day.",
         "hard": "Imposter syndrome is real. Tech changes constantly — you never stop learning.",
         "advice": "Build one tiny app this month. You'll learn more than a semester of theory."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Crush math; take any CS class; build one small app or website."
+        },
+        {
+          "when": "After high school",
+          "step": "Choose a route: a CS degree, a coding bootcamp, or disciplined self-study."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Learn one language deeply and ship 2–3 real projects to GitHub."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Land an internship or freelance gig; contribute to open source."
+        },
+        {
+          "when": "Land the job",
+          "step": "Polish your portfolio, apply widely, and practice coding interviews."
+        }
+      ]
     },
     {
       "id": "registered-nurse",
@@ -104,7 +126,29 @@
         "loved": "A patient hugged me and said I made the scariest day of their life bearable.",
         "hard": "12-hour shifts on your feet, nights and weekends, and you see people on their worst days.",
         "advice": "Volunteer or get a CNA job in high school. You'll know within a month if it's for you."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take biology and chemistry; volunteer or get a CNA job."
+        },
+        {
+          "when": "After high school",
+          "step": "Enroll in a BSN (4 yr) or ADN (2 yr) nursing program."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master clinical skills and pass your nursing courses and labs."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Complete supervised clinical rotations in hospitals during school."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass the NCLEX-RN exam and earn your state license."
+        }
+      ]
     },
     {
       "id": "electrician",
@@ -151,7 +195,29 @@
         "loved": "I can point at buildings and say 'I wired that.' And the pay is solid with no debt.",
         "hard": "Hot attics, cold crawlspaces, early mornings. Your body is your tool — protect it.",
         "advice": "Call three local electrical contractors and ask to shadow for a day. Most say yes."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take shop, math, and physics; find summer helper or labor work."
+        },
+        {
+          "when": "After high school",
+          "step": "Apply to a paid apprenticeship (IBEW or a local contractor)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Attend trade classes and learn the National Electrical Code."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Log 8,000+ supervised hours working under a journeyman."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass the licensing exam to become a journeyman electrician."
+        }
+      ]
     },
     {
       "id": "mechanical-engineer",
@@ -192,7 +258,29 @@
         "loved": "I designed a system that keeps a whole hospital comfortable. That's real impact.",
         "hard": "The degree is genuinely hard. Many start engineering and switch out freshman year.",
         "advice": "If calculus excites you more than it scares you, this could be your path."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Excel in calculus and physics; join a robotics or maker club."
+        },
+        {
+          "when": "After high school",
+          "step": "Start a B.S. in Mechanical Engineering at an accredited school."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master CAD, thermodynamics, and the core engineering courses."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Do co-ops or internships every summer you can."
+        },
+        {
+          "when": "Land the job",
+          "step": "Graduate, pass the FE exam, and apply for engineering roles."
+        }
+      ]
     },
     {
       "id": "ux-designer",
@@ -239,7 +327,29 @@
         "loved": "Watching a confused user suddenly 'get it' because of something I designed.",
         "hard": "Everyone has an opinion on design, so you defend your choices constantly.",
         "advice": "Redesign an app you hate. Put it online. That's the start of a portfolio."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take art/design classes; redesign an app you dislike for fun."
+        },
+        {
+          "when": "After high school",
+          "step": "Choose a route: a design degree or a UX bootcamp/certificate."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Learn Figma and user research; build three case studies."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Do a design internship or freelance for a real client."
+        },
+        {
+          "when": "Land the job",
+          "step": "Apply with a strong portfolio — it matters more than the degree."
+        }
+      ]
     },
     {
       "id": "physician",
@@ -280,7 +390,29 @@
         "loved": "I've delivered babies and caught cancers early. The trust patients give you is sacred.",
         "hard": "The path is 11+ years and huge debt. Burnout is common. Be sure before you start.",
         "advice": "Shadow a doctor for a week. Volunteer in an ER. Love the reality, not the TV version."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Ace biology and chemistry; volunteer at a hospital and shadow a doctor."
+        },
+        {
+          "when": "After high school",
+          "step": "Finish a bachelor's with pre-med courses; score well on the MCAT."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Complete four years of medical school (MD or DO)."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Match into a 3–7 year residency in your chosen specialty."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass your board exams and get licensed to practice."
+        }
+      ]
     },
     {
       "id": "welder",
@@ -327,7 +459,29 @@
         "loved": "Specialty welding pays incredibly well and I'm never bored. Every job is different.",
         "hard": "Sparks, heat, and you must protect your eyes and lungs. Travel can be heavy.",
         "advice": "Take a welding class at a community college. You'll know fast if you have the hands for it."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take a welding or metal-shop class; practice safe technique."
+        },
+        {
+          "when": "After high school",
+          "step": "Enroll in a short welding certificate program or apprenticeship."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master MIG, TIG, and stick welding, and learn to read blueprints."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Earn AWS certifications; practice pipe or structural welding."
+        },
+        {
+          "when": "Land the job",
+          "step": "Get hired — specialize (pipe, underwater) to boost your pay."
+        }
+      ]
     },
     {
       "id": "accountant",
@@ -368,7 +522,29 @@
         "loved": "Every business needs this, so I have huge job security and can work anywhere.",
         "hard": "Busy season is brutal. It's detail work — small errors matter a lot.",
         "advice": "Do a Forage accounting simulation this weekend. It mirrors the real entry-level work."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take math and any business class; get comfortable in Excel."
+        },
+        {
+          "when": "After high school",
+          "step": "Start a B.S. in Accounting at a four-year school."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master financial accounting, tax, and audit coursework."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Do a Forage sim and a summer internship at a firm."
+        },
+        {
+          "when": "Land the job",
+          "step": "Graduate, pass the CPA exam, and join a firm or company."
+        }
+      ]
     },
     {
       "id": "data-scientist",
@@ -413,7 +589,29 @@
         "loved": "Finding a pattern in data that changes a real business decision.",
         "hard": "Roughly 80% of the work is unglamorous data cleaning.",
         "advice": "Analyze a dataset you care about — sports, games, music — and share what you find."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Build strong math and stats; learn to code in Python."
+        },
+        {
+          "when": "After high school",
+          "step": "Pursue a degree in stats, CS, or math (or a serious bootcamp)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master statistics, SQL, and machine-learning basics."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Analyze real datasets and publish projects to a portfolio."
+        },
+        {
+          "when": "Land the job",
+          "step": "Apply for analyst/data roles; many add a master's to stand out."
+        }
+      ]
     },
     {
       "id": "infosec-analyst",
@@ -458,7 +656,29 @@
         "loved": "Stopping a real attack before it does any damage.",
         "hard": "The threats never stop, and you're on call when something breaks.",
         "advice": "Set up a home lab and learn the free TryHackMe or picoCTF challenges."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Tinker with computers and networks; learn security basics."
+        },
+        {
+          "when": "After high school",
+          "step": "Get an IT or cybersecurity degree, or start in IT support."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Earn certifications like Security+ and practice on TryHackMe."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Work a help-desk or junior security role to gain experience."
+        },
+        {
+          "when": "Land the job",
+          "step": "Move into a security analyst role and keep certifying."
+        }
+      ]
     },
     {
       "id": "it-support",
@@ -503,7 +723,29 @@
         "loved": "Fixing something in two minutes that had someone stuck all morning.",
         "hard": "People only call when they're already frustrated.",
         "advice": "Get your CompTIA A+ — it's cheap and employers recognize it instantly."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Build, fix, and tinker with PCs; help friends and family."
+        },
+        {
+          "when": "After high school",
+          "step": "Study for the CompTIA A+ certification (no degree required)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Learn operating systems, networking, and troubleshooting."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Land a help-desk or junior IT role to build a track record."
+        },
+        {
+          "when": "Land the job",
+          "step": "Get hired full-time; use it as a launchpad into security or dev."
+        }
+      ]
     },
     {
       "id": "dental-hygienist",
@@ -542,7 +784,29 @@
         "loved": "Strong pay and a flexible schedule with only a two-year degree.",
         "hard": "It's repetitive and physically hard on your hands and neck.",
         "advice": "Tour a dental hygiene program and shadow for a day before applying."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take biology and chemistry; shadow a hygienist at a clinic."
+        },
+        {
+          "when": "After high school",
+          "step": "Enroll in an accredited dental-hygiene associate program (2–3 yr)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master cleaning, X-rays, and patient-care coursework."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Complete supervised clinical hours during the program."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass national and state board exams to get licensed."
+        }
+      ]
     },
     {
       "id": "physical-therapist",
@@ -581,7 +845,29 @@
         "loved": "Watching a patient take their first steps again after an injury.",
         "hard": "The doctorate is long and pricey, and insurance paperwork is endless.",
         "advice": "Shadow a PT for a week — it's required for most programs anyway."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take biology and anatomy; volunteer in a PT clinic."
+        },
+        {
+          "when": "After high school",
+          "step": "Earn a bachelor's with the prerequisite science courses."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Complete a 3-year Doctor of Physical Therapy (DPT) program."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Do supervised clinical rotations with real patients."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass the national licensure exam (NPTE) to practice."
+        }
+      ]
     },
     {
       "id": "pharmacist",
@@ -620,7 +906,29 @@
         "loved": "Catching a dangerous drug interaction before it reaches a patient.",
         "hard": "Long days on your feet, and zero room for error.",
         "advice": "Get a pharmacy-tech job in high school — it confirms the fit and helps applications."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Excel in chemistry and biology; work or shadow at a pharmacy."
+        },
+        {
+          "when": "After high school",
+          "step": "Finish pre-pharmacy courses (2–4 yr) and apply to PharmD school."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Complete a four-year Doctor of Pharmacy (PharmD) program."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Do pharmacy rotations in retail and hospital settings."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass the NAPLEX licensing exam and get hired."
+        }
+      ]
     },
     {
       "id": "paramedic",
@@ -665,7 +973,29 @@
         "loved": "Being the calm in someone's worst moment, and sometimes saving a life.",
         "hard": "Hard shifts, tough scenes, and modest pay for the stress.",
         "advice": "Get your EMT cert first — it's fast and tells you if the work is for you."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take biology; get CPR-certified; look into a cadet/Explorer post."
+        },
+        {
+          "when": "After high school",
+          "step": "Complete an EMT certificate (a few months)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Gain field experience as an EMT, then train as a paramedic."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Finish paramedic school and your clinical ride-along hours."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass the NREMT exam and get hired by an EMS agency."
+        }
+      ]
     },
     {
       "id": "veterinarian",
@@ -704,7 +1034,29 @@
         "loved": "Sending a sick pet home healthy to a happy family.",
         "hard": "Euthanasia days are brutal, and vet-school debt is heavy.",
         "advice": "Volunteer at a shelter or clinic now — you need the hours and the reality check."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Ace science classes; volunteer at a shelter or animal clinic."
+        },
+        {
+          "when": "After high school",
+          "step": "Earn a bachelor's with pre-vet science courses."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Get into and complete four years of veterinary school (DVM)."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Do clinical rotations and internships working with animals."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass the licensing exam (NAVLE) and start practicing."
+        }
+      ]
     },
     {
       "id": "plumber",
@@ -743,7 +1095,29 @@
         "loved": "Recession-proof work, no debt, and I run my own crew now.",
         "hard": "Dirty jobs, tight spaces, and the occasional 2 a.m. emergency.",
         "advice": "Apply to a union apprenticeship — they pay you to learn the trade."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take shop and math; find a helper job with a plumber."
+        },
+        {
+          "when": "After high school",
+          "step": "Apply to a paid plumbing apprenticeship (4–5 yr)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Attend trade classes; learn codes, fixtures, and pipefitting."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Log supervised on-the-job hours under a master plumber."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass the licensing exam to become a journeyman plumber."
+        }
+      ]
     },
     {
       "id": "hvac-tech",
@@ -782,7 +1156,29 @@
         "loved": "Steady demand, good pay, and no two days the same.",
         "hard": "Hot attics in summer, cold roofs in winter.",
         "advice": "A short trade-school program plus EPA certification gets you working fast."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take shop, math, and physics; tinker with mechanical things."
+        },
+        {
+          "when": "After high school",
+          "step": "Enroll in a short HVAC trade program (6 mo–2 yr)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Learn refrigeration, electrical, and airflow systems."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Apprentice with a company and earn EPA certification."
+        },
+        {
+          "when": "Land the job",
+          "step": "Get hired as an HVAC technician; specialize to earn more."
+        }
+      ]
     },
     {
       "id": "carpenter",
@@ -821,7 +1217,29 @@
         "loved": "Pointing at finished homes and knowing I built them.",
         "hard": "Physically demanding, weather-dependent, and hard on the body over time.",
         "advice": "Try a high-school shop class or a weekend build — you'll know fast if you love it."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take wood shop and math; build small projects at home."
+        },
+        {
+          "when": "After high school",
+          "step": "Join a paid carpentry apprenticeship (3–4 yr)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Learn framing, finishing, blueprints, and tool safety."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Work supervised hours on real job sites."
+        },
+        {
+          "when": "Land the job",
+          "step": "Become a journeyman; specialize (finish, framing) for higher pay."
+        }
+      ]
     },
     {
       "id": "auto-tech",
@@ -860,7 +1278,29 @@
         "loved": "Solving a problem three other shops couldn't figure out.",
         "hard": "You often buy your own tools, and it's hard on your back and hands.",
         "advice": "Get ASE certified and specialize in EVs — that's where the money is going."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take auto shop; fix bikes, cars, and small engines for practice."
+        },
+        {
+          "when": "After high school",
+          "step": "Enroll in a trade-school auto program (6 mo–2 yr)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Learn diagnostics, engines, brakes, and electrical systems."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Apprentice at a shop or dealership; earn ASE certifications."
+        },
+        {
+          "when": "Land the job",
+          "step": "Get hired; specialize in EVs/hybrids for the best pay."
+        }
+      ]
     },
     {
       "id": "financial-analyst",
@@ -899,7 +1339,29 @@
         "loved": "My analysis directly shaping a multi-million-dollar decision.",
         "hard": "Long hours, and the markets don't care about your weekend plans.",
         "advice": "Do a Forage finance simulation — it's the exact entry-level work."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take math and economics; learn Excel and follow the markets."
+        },
+        {
+          "when": "After high school",
+          "step": "Earn a B.S. in finance, economics, or accounting."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master financial modeling, accounting, and valuation."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Do a Forage finance sim and a summer internship."
+        },
+        {
+          "when": "Land the job",
+          "step": "Graduate, apply for analyst roles, and pursue the CFA to advance."
+        }
+      ]
     },
     {
       "id": "marketing-manager",
@@ -938,7 +1400,29 @@
         "loved": "Watching a campaign I built take off and drive real sales.",
         "hard": "You're judged on numbers that the market partly controls.",
         "advice": "Start a social account or blog and grow it — that's a real portfolio."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Run a social account or blog; take any business/media class."
+        },
+        {
+          "when": "After high school",
+          "step": "Earn a bachelor's in marketing, communications, or business."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Learn analytics, content, SEO, and brand strategy."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Intern, then start as a coordinator or specialist."
+        },
+        {
+          "when": "Land the job",
+          "step": "Deliver results and get promoted into management."
+        }
+      ]
     },
     {
       "id": "project-manager",
@@ -977,7 +1461,29 @@
         "loved": "Shipping a big project on time with a team that trusts each other.",
         "hard": "You own the outcome but rarely control all the pieces.",
         "advice": "Lead a club, event, or group project — that's project management in miniature."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Lead a club, team, or event to practice organizing people."
+        },
+        {
+          "when": "After high school",
+          "step": "Earn a bachelor's in business or your industry of interest."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Learn planning tools, budgeting, and Agile basics."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Start in a coordinator role and own small projects."
+        },
+        {
+          "when": "Land the job",
+          "step": "Earn the PMP certification and step into PM roles."
+        }
+      ]
     },
     {
       "id": "civil-engineer",
@@ -1016,7 +1522,29 @@
         "loved": "Driving over a bridge and knowing I helped design it.",
         "hard": "The degree is math-heavy, and public-safety stakes are high.",
         "advice": "If you like physics and building things, this is a stable, respected path."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Excel in math and physics; join a build or robotics club."
+        },
+        {
+          "when": "After high school",
+          "step": "Start a B.S. in Civil Engineering (ABET-accredited)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master structures, materials, and design coursework."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Do internships with firms or public agencies."
+        },
+        {
+          "when": "Land the job",
+          "step": "Graduate, pass the FE exam, then earn your PE license."
+        }
+      ]
     },
     {
       "id": "electrical-engineer",
@@ -1055,7 +1583,29 @@
         "loved": "Holding a working device that started as a sketch on my notepad.",
         "hard": "The coursework is genuinely tough — calculus and physics heavy.",
         "advice": "Build with an Arduino or Raspberry Pi kit to test your interest cheaply."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Crush calculus and physics; build with Arduino kits."
+        },
+        {
+          "when": "After high school",
+          "step": "Start a B.S. in Electrical Engineering."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master circuits, signals, and electromagnetics."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Do co-ops or internships in industry."
+        },
+        {
+          "when": "Land the job",
+          "step": "Graduate, pass the FE exam, and apply for EE roles."
+        }
+      ]
     },
     {
       "id": "architect",
@@ -1094,7 +1644,29 @@
         "loved": "Walking into a finished building I imagined years earlier.",
         "hard": "Long path to licensure, and early-career pay is modest.",
         "advice": "Take art and drafting classes and build a portfolio of sketches and models."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take art, drafting, and math; build a sketch/model portfolio."
+        },
+        {
+          "when": "After high school",
+          "step": "Enroll in an accredited architecture degree (B.Arch or M.Arch)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master design studios, building codes, and CAD/BIM tools."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Complete paid internship hours (AXP) at a firm."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass the ARE exams to become a licensed architect."
+        }
+      ]
     },
     {
       "id": "teacher",
@@ -1133,7 +1705,29 @@
         "loved": "A former student coming back to say I changed their path.",
         "hard": "Pay is modest and the workload spills into evenings.",
         "advice": "Tutor or assist a teacher now — it's the truest test of whether you'll love it."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Tutor classmates; volunteer or assist in a classroom."
+        },
+        {
+          "when": "After high school",
+          "step": "Earn a bachelor's in your subject or in education."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Complete a teacher-prep program and student teaching."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Student-teach in a real classroom under a mentor."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass your state's exams and earn your teaching license."
+        }
+      ]
     },
     {
       "id": "police-officer",
@@ -1172,7 +1766,29 @@
         "loved": "Helping someone on the worst day of their life.",
         "hard": "Shift work, real danger, and intense public scrutiny.",
         "advice": "Do a ride-along and look into Police Explorer programs for teens."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Stay fit and out of trouble; join a Police Explorer program."
+        },
+        {
+          "when": "After high school",
+          "step": "Meet department requirements (HS diploma; some need college)."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Apply and pass the written, physical, and background checks."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Complete the police academy (4–7 months)."
+        },
+        {
+          "when": "Land the job",
+          "step": "Get sworn in and start as a patrol officer with field training."
+        }
+      ]
     },
     {
       "id": "firefighter",
@@ -1211,7 +1827,29 @@
         "loved": "The team feels like family, and the work genuinely matters.",
         "hard": "24-hour shifts, real danger, and hard things you can't unsee.",
         "advice": "Get EMT-certified and volunteer — it's the standard way in."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Stay very fit; volunteer with a fire department if you can."
+        },
+        {
+          "when": "After high school",
+          "step": "Get EMT-certified and take fire-science courses."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Complete a fire academy and physical-ability training."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Volunteer or intern to build hands-on experience."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass testing and get hired by a fire department."
+        }
+      ]
     },
     {
       "id": "lawyer",
@@ -1250,7 +1888,29 @@
         "loved": "Winning a case that genuinely changed a client's life.",
         "hard": "Long hours, heavy debt, and a competitive job market.",
         "advice": "Join debate, and intern at a law office to see the real (paperwork-heavy) day."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Join debate; sharpen reading and writing; keep grades high."
+        },
+        {
+          "when": "After high school",
+          "step": "Earn any bachelor's degree, then score well on the LSAT."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Complete three years of law school (earn your JD)."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Intern at law firms or clerk during school."
+        },
+        {
+          "when": "Land the job",
+          "step": "Pass the bar exam in your state and get licensed."
+        }
+      ]
     },
     {
       "id": "graphic-designer",
@@ -1295,7 +1955,29 @@
         "loved": "Seeing my design on a product, poster, or screen in the real world.",
         "hard": "Lots of subjective feedback, and freelancing income can be uneven.",
         "advice": "Redesign logos or posters you dislike and post them — that's your portfolio."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Take art classes; learn Photoshop/Illustrator; design for fun."
+        },
+        {
+          "when": "After high school",
+          "step": "Choose a route: a design degree or self-taught + portfolio."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Master typography, color, and tools like Adobe and Figma."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Freelance or intern to get real client work."
+        },
+        {
+          "when": "Land the job",
+          "step": "Apply with a strong portfolio — that's what gets you hired."
+        }
+      ]
     },
     {
       "id": "chef",
@@ -1340,7 +2022,29 @@
         "loved": "The energy of a packed dinner service that goes perfectly.",
         "hard": "Nights, weekends, holidays, low early pay, and serious heat.",
         "advice": "Get a job in any kitchen — that's where you learn if you can take the heat."
-      }
+      },
+      "roadmap": [
+        {
+          "when": "In high school",
+          "step": "Cook constantly; get any kitchen job, even dishwashing."
+        },
+        {
+          "when": "After high school",
+          "step": "Decide: work up through kitchens or attend culinary school."
+        },
+        {
+          "when": "Build your skills",
+          "step": "Learn knife skills, stations, food safety, and speed."
+        },
+        {
+          "when": "Get real experience",
+          "step": "Work the line and move up: prep, line cook, sous chef."
+        },
+        {
+          "when": "Land the job",
+          "step": "Earn a head-chef role by proving leadership and consistency."
+        }
+      ]
     }
   ]
 }
