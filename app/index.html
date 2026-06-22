@@ -6,21 +6,21 @@
 <title>CareerQuest — Try the Major Before You Pay for It</title>
 <style>
   :root{
-    --bg:#0e1020; --bg2:#171a33; --card:#1d2142; --card2:#252a52;
-    --ink:#eef0ff; --muted:#a3a8d4; --line:#33386b;
-    --accent:#5ce1b9; --accent2:#7c8cff; --gold:#ffd166; --warn:#ff6b8b;
-    --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
+    --bg:#f6f8fe; --bg2:#eef2fb; --card:#ffffff; --card2:#f3f6fd;
+    --ink:#1b2150; --muted:#5b628c; --line:#e3e7f3;
+    --accent:#0bb88f; --accent2:#5b6cf5; --gold:#d99700; --warn:#ef5a73;
+    --radius:16px; --shadow:0 10px 30px rgba(40,50,120,.12);
     font-synthesis:none;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#23284f 0%,var(--bg) 55%);
+  body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#e7ecff 0%,var(--bg) 55%);
     color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.5}
   a{color:var(--accent2)}
   button{font-family:inherit;cursor:pointer}
   .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
 
   /* HUD */
-  header.hud{position:sticky;top:0;z-index:30;background:rgba(14,16,32,.82);
+  header.hud{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.85);
     backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .hud-row{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
   .logo{font-weight:800;font-size:20px;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
@@ -102,7 +102,7 @@
   section.block > h3.shead{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin:0 0 12px}
 
   /* modal */
-  .scrim{position:fixed;inset:0;background:rgba(4,6,16,.7);backdrop-filter:blur(4px);
+  .scrim{position:fixed;inset:0;background:rgba(27,33,80,.45);backdrop-filter:blur(4px);
     display:none;align-items:center;justify-content:center;z-index:50;padding:18px}
   .scrim.open{display:flex}
   .modal{background:var(--bg2);border:1px solid var(--line);border-radius:18px;max-width:680px;width:100%;
@@ -141,7 +141,7 @@
   .dir-item .di-emoji{font-size:22px}
   .dir-item h4{margin:0 0 2px;font-size:15px}
   .dir-item p{margin:0;font-size:13px;color:var(--muted)}
-  .scriptbox{background:#0b0d1c;border:1px dashed var(--line);border-radius:10px;padding:12px;font-size:13px;white-space:pre-wrap;margin-top:8px}
+  .scriptbox{background:#f1f3fb;border:1px dashed var(--line);border-radius:10px;padding:12px;font-size:13px;white-space:pre-wrap;margin-top:8px}
   .copy{margin-top:8px}
   .opt{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);
     color:var(--ink);padding:11px 14px;border-radius:10px;margin:8px 0;font-size:14px}
