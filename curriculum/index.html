@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CareerQuest — Curriculum</title>
+<style>
+  :root{--bg:#0e1020;--card:#1d2142;--ink:#eef0ff;--muted:#a3a8d4;--line:#33386b;--accent:#5ce1b9;--accent2:#7c8cff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6}
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
+  header{padding:46px 0 18px;border-bottom:1px solid var(--line)}
+  header .back{color:var(--muted);font-size:14px}
+  h1{font-size:32px;margin:14px 0 6px}
+  header p{color:var(--muted);max-width:620px;margin:0}
+  h2{font-size:14px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin:38px 0 14px}
+  .mod{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:12px;align-items:flex-start}
+  .mod .n{font-weight:800;color:var(--accent);font-size:15px;min-width:30px}
+  .mod b{font-size:17px}.mod p{margin:4px 0 0;color:var(--muted);font-size:14px}
+  .mod a.open{margin-top:8px;display:inline-block;font-size:14px;font-weight:700}
+  .files{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:600px){.files{grid-template-columns:1fr}}
+  .file{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .file b{display:block}.file span{color:var(--muted);font-size:13px}
+  .cta{display:inline-block;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#06121a;
+    padding:12px 22px;border-radius:12px;font-weight:800;margin:24px 0}
+  footer{border-top:1px solid var(--line);padding:26px 0 60px;color:var(--muted);font-size:13px;margin-top:30px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="back" href="../">← CareerQuest home</a>
+  <h1>The Curriculum</h1>
+  <p>Eight self-paced modules that wrap the gamified app into a guided course. Use it solo, or run it as a parent- or counselor-led class with the facilitator guide and worksheets below.</p>
+  <a class="cta" href="../app/">▶ Open the app and start questing</a>
+</div></header>
+
+<main class="wrap">
+  <h2>Start here</h2>
+  <div class="mod"><div class="n">📘</div><div><b>Facilitator Guide</b><p>How to run the course — pacing options, outcomes, and how to facilitate without steering. Read this first if you're a parent or teacher.</p><a class="open" href="facilitator-guide.md">Open guide →</a></div></div>
+
+  <h2>The eight modules</h2>
+  <div class="mod"><div class="n">01</div><div><b>Why Most People Pick Wrong</b><p>The real cost of choosing a major by default — and the method to avoid it.</p><a class="open" href="module-01-why-most-people-pick-wrong.md">Open →</a></div></div>
+  <div class="mod"><div class="n">02</div><div><b>Know Thyself</b><p>A fast, honest inventory of your energy, strengths, values, and limits.</p><a class="open" href="module-02-know-thyself.md">Open →</a></div></div>
+  <div class="mod"><div class="n">03</div><div><b>Scout a World</b><p>Day-in-the-life research and mapping every road into a career. <em>App: Recon quests.</em></p><a class="open" href="module-03-scout-a-world.md">Open →</a></div></div>
+  <div class="mod"><div class="n">04</div><div><b>Meet the Locals</b><p>Informational interviews and job shadowing, step by step. <em>The highest-value hour in the course.</em></p><a class="open" href="module-04-meet-the-locals.md">Open →</a></div></div>
+  <div class="mod"><div class="n">05</div><div><b>Test-Drive the Work</b><p>Free Forage job simulations and hands-on substitutes. <em>App: Field Work quest.</em></p><a class="open" href="module-05-test-drive-the-work.md">Open →</a></div></div>
+  <div class="mod"><div class="n">06</div><div><b>Follow the Money</b><p>Cost of attendance, debt, salary, and the ROI calculator. <em>App: Run the Money Math.</em></p><a class="open" href="module-06-follow-the-money.md">Open →</a></div></div>
+  <div class="mod"><div class="n">07</div><div><b>The Roads In</b><p>Degrees, two-year programs, apprenticeships, trades, and self-taught paths.</p><a class="open" href="module-07-the-roads-in.md">Open →</a></div></div>
+  <div class="mod"><div class="n">08</div><div><b>The Verdict</b><p>The 40-year question, the quiz, and a defensible Plan A/B/C. <em>App: Reality Check quests.</em></p><a class="open" href="module-08-the-verdict.md">Open →</a></div></div>
+
+  <h2>Tools &amp; worksheets</h2>
+  <div class="files">
+    <div class="file"><b><a href="mentor-outreach-scripts.md">Mentor Outreach Scripts</a></b><span>Copy-paste messages to book interviews and shadows.</span></div>
+    <div class="file"><b><a href="worksheets/career-scout-sheet.md">Career Scout Sheet</a></b><span>One per career world you explore.</span></div>
+    <div class="file"><b><a href="worksheets/roi-worksheet.md">ROI Worksheet</a></b><span>Compare two paths to the same job.</span></div>
+    <div class="file"><b><a href="worksheets/decision-matrix.md">Decision Matrix</a></b><span>Score the roads in and build Plan A/B/C.</span></div>
+  </div>
+</main>
+
+<footer><div class="wrap">CareerQuest is an open-source educational project. Salary figures are illustrative national medians (BLS, 2024) — verify current local data. Not financial advice.</div></footer>
+</body>
+</html>
