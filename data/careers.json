@@ -1,8 +1,9 @@
 {
   "_meta": {
-    "note": "Salary figures are illustrative U.S. national medians drawn from the Bureau of Labor Statistics Occupational Outlook Handbook (May 2024 reference year). They are starting points for conversation, NOT guarantees. Always click the BLS link to verify current national and local numbers before making decisions.",
+    "note": "Salary figures are illustrative U.S. national medians from the BLS Occupational Outlook Handbook (May 2024). They are starting points for conversation, NOT guarantees. Verify current local numbers via each career's BLS link.",
     "source": "https://www.bls.gov/ooh/",
-    "lastReviewed": "2026-06"
+    "lastReviewed": "2026-06",
+    "count": 32
   },
   "careers": [
     {
@@ -12,29 +13,49 @@
       "cluster": "Technology",
       "median": "$133,080",
       "range": "$74k – $208k+",
-      "outlook": "Much faster than average growth",
-      "blsUrl": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
+      "outlook": "Much faster than avg",
+      "bls": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
       "paths": [
-        { "label": "Bachelor's in Computer Science", "years": "4 yrs", "cost": "$48k–$190k", "note": "Traditional route. Internships matter more than GPA." },
-        { "label": "Coding bootcamp", "years": "3–9 mo", "cost": "$0–$20k", "note": "Faster, cheaper, but you must build a portfolio and grind." },
-        { "label": "Self-taught + projects", "years": "varies", "cost": "~$0", "note": "Hardest path to a first job, but real for the disciplined." }
+        {
+          "label": "B.S. Computer Science",
+          "years": "4 yrs",
+          "cost": "$48k–$190k",
+          "note": "Traditional route. Internships matter more than GPA."
+        },
+        {
+          "label": "Coding bootcamp",
+          "years": "3–9 mo",
+          "cost": "$0–$20k",
+          "note": "Faster and cheaper, but you must build a portfolio."
+        },
+        {
+          "label": "Self-taught + projects",
+          "years": "varies",
+          "cost": "~$0",
+          "note": "Hardest path to a first job, but real for the disciplined."
+        }
       ],
-      "skills": ["Problem solving", "Logic", "Patience for debugging", "Communication"],
+      "skills": [
+        "Problem solving",
+        "Logic",
+        "Patience for debugging",
+        "Communication"
+      ],
       "forage": "Try the JPMorgan Software Engineering or Wells Fargo simulations on Forage (free).",
       "mentor": {
         "name": "Priya R.",
         "role": "Backend Developer, 6 yrs in",
         "quote": "Nobody tells you 70% of the job is reading other people's code and sitting in meetings.",
-        "dayInLife": [
+        "day": [
           "9:00 — Stand-up meeting, say what I'm working on (2 min).",
           "9:30 — Code. Mostly fixing a bug a customer reported.",
           "12:30 — Lunch, usually at my desk reading docs.",
-          "1:30 — Code review: I read a teammate's work and leave comments.",
+          "1:30 — Code review: read a teammate's work, leave comments.",
           "4:00 — Meeting about next month's features.",
-          "5:30 — Wrap up, push my code, log off."
+          "5:30 — Push my code, log off."
         ],
-        "lovedIt": "Building something and watching thousands of people use it the next day.",
-        "hardPart": "Imposter syndrome is real. Tech changes constantly — you never stop learning.",
+        "loved": "Building something and watching thousands use it the next day.",
+        "hard": "Imposter syndrome is real. Tech changes constantly — you never stop learning.",
         "advice": "Build one tiny app this month. You'll learn more than a semester of theory."
       }
     },
@@ -45,28 +66,43 @@
       "cluster": "Healthcare",
       "median": "$93,600",
       "range": "$66k – $135k",
-      "outlook": "Faster than average growth",
-      "blsUrl": "https://www.bls.gov/ooh/healthcare/registered-nurses.htm",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/healthcare/registered-nurses.htm",
       "paths": [
-        { "label": "BSN (Bachelor of Science in Nursing)", "years": "4 yrs", "cost": "$40k–$120k", "note": "Preferred by hospitals; opens more doors." },
-        { "label": "ADN (Associate Degree in Nursing)", "years": "2 yrs", "cost": "$6k–$40k", "note": "Faster and cheaper way in; many bridge to BSN later while working." }
+        {
+          "label": "BSN (Bachelor's)",
+          "years": "4 yrs",
+          "cost": "$40k–$120k",
+          "note": "Preferred by hospitals; opens more doors."
+        },
+        {
+          "label": "ADN (Associate)",
+          "years": "2 yrs",
+          "cost": "$6k–$40k",
+          "note": "Faster, cheaper way in; bridge to BSN later while working."
+        }
       ],
-      "skills": ["Empathy", "Staying calm under pressure", "Attention to detail", "Stamina"],
+      "skills": [
+        "Empathy",
+        "Calm under pressure",
+        "Attention to detail",
+        "Stamina"
+      ],
       "forage": "Search Forage for healthcare and life-sciences experiences.",
       "mentor": {
         "name": "Marcus T.",
         "role": "ER Nurse, 8 yrs in",
         "quote": "It is physically and emotionally hard, and also the most meaningful work I can imagine.",
-        "dayInLife": [
-          "6:45 — Get report from the night shift on my patients.",
+        "day": [
+          "6:45 — Get report from the night shift.",
           "7:30 — Med pass, check vitals, chart everything.",
           "10:00 — A trauma comes in. Everything else waits.",
           "1:00 — Eat half a sandwich standing up.",
-          "3:00 — Discharge a patient, admit a new one.",
-          "7:15 — Hand off to the next shift. 12-hour day done."
+          "3:00 — Discharge one patient, admit another.",
+          "7:15 — Hand off to next shift. 12-hour day done."
         ],
-        "lovedIt": "A patient hugged me and said I made the scariest day of their life bearable.",
-        "hardPart": "12-hour shifts on your feet, nights and weekends, and you see people on their worst days.",
+        "loved": "A patient hugged me and said I made the scariest day of their life bearable.",
+        "hard": "12-hour shifts on your feet, nights and weekends, and you see people on their worst days.",
         "advice": "Volunteer or get a CNA job in high school. You'll know within a month if it's for you."
       }
     },
@@ -77,19 +113,34 @@
       "cluster": "Skilled Trades",
       "median": "$61,590",
       "range": "$39k – $104k",
-      "outlook": "Faster than average growth",
-      "blsUrl": "https://www.bls.gov/ooh/construction-and-extraction/electricians.htm",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/construction-and-extraction/electricians.htm",
       "paths": [
-        { "label": "Paid apprenticeship", "years": "4–5 yrs", "cost": "Earn while you learn (≈ $0 debt)", "note": "You get PAID to train. No degree required. This is the headline." },
-        { "label": "Trade school + apprenticeship", "years": "1 yr + apprenticeship", "cost": "$5k–$15k", "note": "Short program first, then apprentice hours." }
+        {
+          "label": "Paid apprenticeship",
+          "years": "4–5 yrs",
+          "cost": "Earn while you learn (≈ $0 debt)",
+          "note": "You get PAID to train. No degree required."
+        },
+        {
+          "label": "Trade school + apprenticeship",
+          "years": "1 yr + hours",
+          "cost": "$5k–$15k",
+          "note": "Short program first, then apprentice hours."
+        }
       ],
-      "skills": ["Working with your hands", "Math", "Safety focus", "Spatial reasoning"],
+      "skills": [
+        "Working with your hands",
+        "Math",
+        "Safety focus",
+        "Spatial reasoning"
+      ],
       "forage": "Trades aren't on Forage — book a real job-shadow with a local contractor instead.",
       "mentor": {
         "name": "Dee W.",
         "role": "Journeyman Electrician, 11 yrs in",
         "quote": "I have zero student debt and own a house. My friends with degrees are still paying theirs off.",
-        "dayInLife": [
+        "day": [
           "6:30 — Load the van, drive to the job site.",
           "7:00 — Pull wire and set boxes for a new building.",
           "10:00 — Troubleshoot a circuit that won't pass inspection.",
@@ -97,8 +148,8 @@
           "1:00 — Run conduit, label the panel.",
           "3:30 — Clean up, plan tomorrow, head home."
         ],
-        "lovedIt": "I can point at buildings and say 'I wired that.' And the pay is solid with no debt.",
-        "hardPart": "Hot attics, cold crawlspaces, early mornings. Your body is your tool — protect it.",
+        "loved": "I can point at buildings and say 'I wired that.' And the pay is solid with no debt.",
+        "hard": "Hot attics, cold crawlspaces, early mornings. Your body is your tool — protect it.",
         "advice": "Call three local electrical contractors and ask to shadow for a day. Most say yes."
       }
     },
@@ -109,18 +160,28 @@
       "cluster": "Engineering",
       "median": "$99,510",
       "range": "$64k – $157k",
-      "outlook": "Faster than average growth",
-      "blsUrl": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
       "paths": [
-        { "label": "Bachelor's in Mechanical Engineering", "years": "4 yrs", "cost": "$48k–$190k", "note": "Required. It's a heavy math and physics load — be honest about that." }
+        {
+          "label": "B.S. Mechanical Engineering",
+          "years": "4 yrs",
+          "cost": "$48k–$190k",
+          "note": "Required. Heavy math and physics — be honest about that."
+        }
       ],
-      "skills": ["Math & physics", "CAD software", "Curiosity about how things work", "Teamwork"],
+      "skills": [
+        "Math & physics",
+        "CAD software",
+        "Curiosity about how things work",
+        "Teamwork"
+      ],
       "forage": "Try engineering simulations on Forage from companies like GE or Lockheed.",
       "mentor": {
         "name": "Sofia L.",
         "role": "Mechanical Engineer (HVAC), 5 yrs in",
         "quote": "Real engineering is 80% spreadsheets and emails, 20% the cool design stuff from class.",
-        "dayInLife": [
+        "day": [
           "8:30 — Check email, review a contractor's questions.",
           "9:30 — Design work in CAD, size equipment for a building.",
           "11:30 — Site visit to check an install.",
@@ -128,8 +189,8 @@
           "3:30 — Team meeting on project schedule.",
           "5:00 — Wrap up the report, log off."
         ],
-        "lovedIt": "I designed a system that keeps a whole hospital comfortable. That's real impact.",
-        "hardPart": "The degree is genuinely hard. Many start engineering and switch out freshman year.",
+        "loved": "I designed a system that keeps a whole hospital comfortable. That's real impact.",
+        "hard": "The degree is genuinely hard. Many start engineering and switch out freshman year.",
         "advice": "If calculus excites you more than it scares you, this could be your path."
       }
     },
@@ -140,28 +201,43 @@
       "cluster": "Design + Tech",
       "median": "$98,540",
       "range": "$45k – $150k",
-      "outlook": "Faster than average growth",
-      "blsUrl": "https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm",
       "paths": [
-        { "label": "Bachelor's (design, HCI, or related)", "years": "4 yrs", "cost": "$48k–$190k", "note": "Helps, but a strong portfolio beats a degree here." },
-        { "label": "Bootcamp / certificate + portfolio", "years": "3–12 mo", "cost": "$0–$15k", "note": "Very viable. Employers hire on portfolio, not diploma." }
+        {
+          "label": "Bachelor's (design/HCI)",
+          "years": "4 yrs",
+          "cost": "$48k–$190k",
+          "note": "Helps, but a strong portfolio beats a degree here."
+        },
+        {
+          "label": "Bootcamp/certificate + portfolio",
+          "years": "3–12 mo",
+          "cost": "$0–$15k",
+          "note": "Very viable. Employers hire on portfolio, not diploma."
+        }
       ],
-      "skills": ["Visual taste", "Empathy for users", "Figma", "Communicating ideas"],
+      "skills": [
+        "Visual taste",
+        "Empathy for users",
+        "Figma",
+        "Communicating ideas"
+      ],
       "forage": "Search Forage for design and product experiences.",
       "mentor": {
         "name": "Jordan K.",
         "role": "Product Designer, 7 yrs in",
-        "quote": "Your portfolio is your degree. I've hired people with no college and turned down people with master's.",
-        "dayInLife": [
+        "quote": "Your portfolio is your degree. I've hired people with no college and turned down master's grads.",
+        "day": [
           "9:00 — Review user feedback on a feature.",
           "10:00 — Sketch and design screens in Figma.",
-          "12:00 — Present designs to engineers and product managers.",
+          "12:00 — Present designs to engineers and PMs.",
           "1:30 — Revise based on feedback.",
           "3:00 — User-testing call, watch someone use the product.",
           "4:30 — Document decisions, hand off to engineering."
         ],
-        "lovedIt": "Watching a confused user suddenly 'get it' because of something I designed.",
-        "hardPart": "Everyone has an opinion on design, so you defend your choices constantly.",
+        "loved": "Watching a confused user suddenly 'get it' because of something I designed.",
+        "hard": "Everyone has an opinion on design, so you defend your choices constantly.",
         "advice": "Redesign an app you hate. Put it online. That's the start of a portfolio."
       }
     },
@@ -172,28 +248,38 @@
       "cluster": "Healthcare",
       "median": "$239,200+",
       "range": "$170k – $400k+",
-      "outlook": "Faster than average growth",
-      "blsUrl": "https://www.bls.gov/ooh/healthcare/physicians-and-surgeons.htm",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/healthcare/physicians-and-surgeons.htm",
       "paths": [
-        { "label": "Bachelor's → Med School → Residency", "years": "11–15 yrs", "cost": "$200k–$400k+ debt common", "note": "Long, expensive, intense. The pay is high but it comes much later." }
+        {
+          "label": "Bachelor's → Med School → Residency",
+          "years": "11–15 yrs",
+          "cost": "$200k–$400k+ debt common",
+          "note": "Long, expensive, intense. High pay comes much later."
+        }
       ],
-      "skills": ["Top-tier discipline", "Science aptitude", "Emotional resilience", "Delayed gratification"],
+      "skills": [
+        "Top-tier discipline",
+        "Science aptitude",
+        "Emotional resilience",
+        "Delayed gratification"
+      ],
       "forage": "Shadow a doctor and volunteer in a hospital before committing to this path.",
       "mentor": {
         "name": "Dr. Amir H.",
-        "role": "Family Medicine, attending (started med school at 22, finished training at 29)",
+        "role": "Family Medicine, attending",
         "quote": "I love it now, but I gave up my whole 20s and finished training with $280k in debt.",
-        "dayInLife": [
+        "day": [
           "7:30 — Review the day's patient charts.",
-          "8:00 — See patients, every 15–20 minutes.",
+          "8:00 — See patients every 15–20 minutes.",
           "12:00 — Quick lunch while finishing notes.",
-          "1:00 — More patients, plus phone calls and refills.",
+          "1:00 — More patients, plus calls and refills.",
           "5:00 — Charting that didn't get done during the day.",
           "6:30 — Finally home."
         ],
-        "lovedIt": "I've delivered babies and caught cancers early. The trust patients give you is sacred.",
-        "hardPart": "The path is 11+ years and huge debt. Burnout is common. Be sure before you start.",
-        "advice": "Shadow a doctor for a week. Volunteer in an ER. Make sure you love the reality, not the TV version."
+        "loved": "I've delivered babies and caught cancers early. The trust patients give you is sacred.",
+        "hard": "The path is 11+ years and huge debt. Burnout is common. Be sure before you start.",
+        "advice": "Shadow a doctor for a week. Volunteer in an ER. Love the reality, not the TV version."
       }
     },
     {
@@ -203,19 +289,34 @@
       "cluster": "Skilled Trades",
       "median": "$50,460",
       "range": "$37k – $72k+",
-      "outlook": "Average growth (high demand for skilled welders)",
-      "blsUrl": "https://www.bls.gov/ooh/production/welders-cutters-solderers-and-brazers.htm",
+      "outlook": "Steady; high demand for skilled welders",
+      "bls": "https://www.bls.gov/ooh/production/welders-cutters-solderers-and-brazers.htm",
       "paths": [
-        { "label": "Trade school / certificate", "years": "6–18 mo", "cost": "$5k–$15k", "note": "Short and cheap. Specialized welders (pipe, underwater) earn far more." },
-        { "label": "Apprenticeship", "years": "varies", "cost": "Earn while learning", "note": "On-the-job training, little to no debt." }
+        {
+          "label": "Trade school / certificate",
+          "years": "6–18 mo",
+          "cost": "$5k–$15k",
+          "note": "Short and cheap. Pipe & underwater welders earn far more."
+        },
+        {
+          "label": "Apprenticeship",
+          "years": "varies",
+          "cost": "Earn while learning",
+          "note": "On-the-job training, little to no debt."
+        }
       ],
-      "skills": ["Steady hands", "Focus", "Comfort with heat/sparks", "Reading blueprints"],
-      "forage": "Not on Forage — visit a welding school open house or shadow a fabrication shop.",
+      "skills": [
+        "Steady hands",
+        "Focus",
+        "Comfort with heat/sparks",
+        "Reading blueprints"
+      ],
+      "forage": "Not on Forage — visit a welding school open house or shadow a fab shop.",
       "mentor": {
         "name": "Ray P.",
         "role": "Pipe Welder, 9 yrs in",
         "quote": "Certified pipe and underwater welders can clear six figures. The ceiling is higher than people think.",
-        "dayInLife": [
+        "day": [
           "6:00 — Gear up, review the day's blueprints.",
           "6:30 — Set up the rig and start laying beads.",
           "10:00 — Inspector checks my welds with X-ray.",
@@ -223,8 +324,8 @@
           "12:45 — Back to welding, different position.",
           "3:30 — Clean station, log work, head out."
         ],
-        "lovedIt": "Specialty welding pays incredibly well and I'm never bored. Every job is different.",
-        "hardPart": "Sparks, heat, and you must protect your eyes and lungs. Travel can be heavy.",
+        "loved": "Specialty welding pays incredibly well and I'm never bored. Every job is different.",
+        "hard": "Sparks, heat, and you must protect your eyes and lungs. Travel can be heavy.",
         "advice": "Take a welding class at a community college. You'll know fast if you have the hands for it."
       }
     },
@@ -236,27 +337,1009 @@
       "median": "$81,680",
       "range": "$50k – $138k",
       "outlook": "Average growth",
-      "blsUrl": "https://www.bls.gov/ooh/business-and-financial/accountants-and-auditors.htm",
+      "bls": "https://www.bls.gov/ooh/business-and-financial/accountants-and-auditors.htm",
       "paths": [
-        { "label": "Bachelor's in Accounting + CPA", "years": "4 yrs + exam", "cost": "$48k–$190k", "note": "CPA license boosts pay and options significantly." }
+        {
+          "label": "B.S. Accounting + CPA",
+          "years": "4 yrs + exam",
+          "cost": "$48k–$190k",
+          "note": "CPA license boosts pay and options significantly."
+        }
       ],
-      "skills": ["Comfort with numbers", "Organization", "Ethics", "Attention to detail"],
-      "forage": "Try the PwC, KPMG, or Deloitte audit/tax simulations on Forage (free).",
+      "skills": [
+        "Comfort with numbers",
+        "Organization",
+        "Ethics",
+        "Attention to detail"
+      ],
+      "forage": "Try the PwC, KPMG, or Deloitte simulations on Forage (free).",
       "mentor": {
         "name": "Hannah B.",
-        "role": "Staff Accountant at a firm, 4 yrs in",
-        "quote": "Stable, well-paid, and in demand everywhere — but 'busy season' means 60-hour weeks.",
-        "dayInLife": [
+        "role": "Staff Accountant, 4 yrs in",
+        "quote": "Stable, well-paid, in demand everywhere — but 'busy season' means 60-hour weeks.",
+        "day": [
           "8:30 — Coffee, review client emails.",
           "9:00 — Reconcile accounts, check the numbers.",
           "11:00 — Call with a client about their books.",
-          "12:30 — Lunch out (a real break, except in busy season).",
+          "12:30 — Lunch out (except in busy season).",
           "1:30 — Prepare financial statements.",
           "5:00 — Done — except Jan–April, when it's 7pm+."
         ],
-        "lovedIt": "Every business needs this, so I have huge job security and can work anywhere.",
-        "hardPart": "Busy season is brutal. And it's detail work — small errors matter a lot.",
+        "loved": "Every business needs this, so I have huge job security and can work anywhere.",
+        "hard": "Busy season is brutal. It's detail work — small errors matter a lot.",
         "advice": "Do a Forage accounting simulation this weekend. It mirrors the real entry-level work."
+      }
+    },
+    {
+      "id": "data-scientist",
+      "name": "Data Scientist",
+      "emoji": "📈",
+      "cluster": "Technology",
+      "median": "$112,590",
+      "range": "$70k – $180k+",
+      "outlook": "Much faster than avg",
+      "bls": "https://www.bls.gov/ooh/math/data-scientists.htm",
+      "paths": [
+        {
+          "label": "B.S. in stats, CS, or math",
+          "years": "4 yrs",
+          "cost": "$48k–$190k",
+          "note": "Most common route; many add a master's later."
+        },
+        {
+          "label": "Bootcamp + project portfolio",
+          "years": "6–12 mo",
+          "cost": "$0–$20k",
+          "note": "Works if you can show real analysis on real data."
+        }
+      ],
+      "skills": [
+        "Statistics",
+        "Python & SQL",
+        "Curiosity",
+        "Explaining findings simply"
+      ],
+      "forage": "Try data and analytics simulations on Forage.",
+      "mentor": {
+        "name": "Wei C.",
+        "role": "Data Scientist, 5 yrs in",
+        "quote": "Most of the job is cleaning messy data, not building fancy AI models.",
+        "day": [
+          "9:00 — Pull and clean a new dataset.",
+          "11:00 — Build a model and test whether it actually helps.",
+          "1:30 — Explain results to non-technical managers.",
+          "3:30 — Document the analysis and next steps."
+        ],
+        "loved": "Finding a pattern in data that changes a real business decision.",
+        "hard": "Roughly 80% of the work is unglamorous data cleaning.",
+        "advice": "Analyze a dataset you care about — sports, games, music — and share what you find."
+      }
+    },
+    {
+      "id": "infosec-analyst",
+      "name": "Cybersecurity Analyst",
+      "emoji": "🛡️",
+      "cluster": "Technology",
+      "median": "$124,910",
+      "range": "$75k – $185k+",
+      "outlook": "Much faster than avg",
+      "bls": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm",
+      "paths": [
+        {
+          "label": "B.S. in cybersecurity or IT",
+          "years": "4 yrs",
+          "cost": "$48k–$190k",
+          "note": "Common, but certifications often matter more than the degree."
+        },
+        {
+          "label": "Certifications (Security+, etc.)",
+          "years": "3–12 mo",
+          "cost": "$1k–$6k",
+          "note": "Many start in IT support, then certify their way in."
+        }
+      ],
+      "skills": [
+        "Attention to detail",
+        "Problem solving",
+        "Networking basics",
+        "Staying calm in a crisis"
+      ],
+      "forage": "Try cybersecurity simulations (Mastercard, Datacom) on Forage.",
+      "mentor": {
+        "name": "Tariq M.",
+        "role": "Security Analyst, 6 yrs in",
+        "quote": "It's part detective work, part teaching everyone else not to click bad links.",
+        "day": [
+          "8:30 — Review overnight security alerts.",
+          "10:00 — Investigate a suspicious login.",
+          "1:00 — Run a phishing test on staff.",
+          "3:00 — Patch systems and write up findings."
+        ],
+        "loved": "Stopping a real attack before it does any damage.",
+        "hard": "The threats never stop, and you're on call when something breaks.",
+        "advice": "Set up a home lab and learn the free TryHackMe or picoCTF challenges."
+      }
+    },
+    {
+      "id": "it-support",
+      "name": "IT Support Specialist",
+      "emoji": "🖥️",
+      "cluster": "Technology",
+      "median": "$60,830",
+      "range": "$38k – $94k",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm",
+      "paths": [
+        {
+          "label": "Certifications (CompTIA A+)",
+          "years": "2–6 mo",
+          "cost": "$300–$2k",
+          "note": "A fast, cheap on-ramp into tech with no degree required."
+        },
+        {
+          "label": "Associate degree",
+          "years": "2 yrs",
+          "cost": "$6k–$40k",
+          "note": "Helps, and can bridge toward higher IT roles."
+        }
+      ],
+      "skills": [
+        "Patience",
+        "Troubleshooting",
+        "Communication",
+        "Curiosity about how things work"
+      ],
+      "forage": "Search Forage for IT and tech support experiences.",
+      "mentor": {
+        "name": "Brianna O.",
+        "role": "IT Support, 3 yrs in",
+        "quote": "This is the best foot-in-the-door job in tech — half of security and dev folks started here.",
+        "day": [
+          "8:00 — Work the help-desk ticket queue.",
+          "10:30 — Set up laptops for new hires.",
+          "1:00 — Walk someone through a fix over the phone.",
+          "3:30 — Reset accounts and update documentation."
+        ],
+        "loved": "Fixing something in two minutes that had someone stuck all morning.",
+        "hard": "People only call when they're already frustrated.",
+        "advice": "Get your CompTIA A+ — it's cheap and employers recognize it instantly."
+      }
+    },
+    {
+      "id": "dental-hygienist",
+      "name": "Dental Hygienist",
+      "emoji": "🦷",
+      "cluster": "Healthcare",
+      "median": "$94,260",
+      "range": "$66k – $120k",
+      "outlook": "Much faster than avg",
+      "bls": "https://www.bls.gov/ooh/healthcare/dental-hygienists.htm",
+      "paths": [
+        {
+          "label": "Associate degree in dental hygiene",
+          "years": "2–3 yrs",
+          "cost": "$15k–$60k",
+          "note": "Strong pay for two years of school, plus a state license."
+        }
+      ],
+      "skills": [
+        "Steady hands",
+        "People skills",
+        "Attention to detail",
+        "Comfort up close"
+      ],
+      "forage": "Shadow a hygienist at a local dental office to see the real day.",
+      "mentor": {
+        "name": "Lacey N.",
+        "role": "Dental Hygienist, 7 yrs in",
+        "quote": "Great pay, flexible schedule, and I can work three or four days a week.",
+        "day": [
+          "8:00 — Review the day's patients and X-rays.",
+          "9:00 — Clean teeth and check for problems.",
+          "12:00 — Lunch break.",
+          "1:00 — More patients, plus coaching on home care."
+        ],
+        "loved": "Strong pay and a flexible schedule with only a two-year degree.",
+        "hard": "It's repetitive and physically hard on your hands and neck.",
+        "advice": "Tour a dental hygiene program and shadow for a day before applying."
+      }
+    },
+    {
+      "id": "physical-therapist",
+      "name": "Physical Therapist",
+      "emoji": "💪",
+      "cluster": "Healthcare",
+      "median": "$101,020",
+      "range": "$72k – $130k",
+      "outlook": "Much faster than avg",
+      "bls": "https://www.bls.gov/ooh/healthcare/physical-therapists.htm",
+      "paths": [
+        {
+          "label": "Bachelor's → Doctor of Physical Therapy",
+          "years": "7 yrs",
+          "cost": "$100k–$200k+",
+          "note": "A doctorate (DPT) is required — long and expensive, but stable pay."
+        }
+      ],
+      "skills": [
+        "Empathy",
+        "Science aptitude",
+        "Motivating people",
+        "Physical stamina"
+      ],
+      "forage": "Volunteer or shadow in a PT clinic before committing to the doctorate.",
+      "mentor": {
+        "name": "Greg A.",
+        "role": "Physical Therapist, 9 yrs in",
+        "quote": "I help people walk again after surgery — but the schooling is a full seven years.",
+        "day": [
+          "8:00 — First patient recovering from knee surgery.",
+          "10:00 — Design exercise plans and track progress.",
+          "1:00 — Hands-on therapy sessions.",
+          "4:00 — Chart notes and insurance paperwork."
+        ],
+        "loved": "Watching a patient take their first steps again after an injury.",
+        "hard": "The doctorate is long and pricey, and insurance paperwork is endless.",
+        "advice": "Shadow a PT for a week — it's required for most programs anyway."
+      }
+    },
+    {
+      "id": "pharmacist",
+      "name": "Pharmacist",
+      "emoji": "💊",
+      "cluster": "Healthcare",
+      "median": "$137,480",
+      "range": "$104k – $170k",
+      "outlook": "Average growth",
+      "bls": "https://www.bls.gov/ooh/healthcare/pharmacists.htm",
+      "paths": [
+        {
+          "label": "Pre-pharmacy → Doctor of Pharmacy (PharmD)",
+          "years": "6–8 yrs",
+          "cost": "$100k–$200k+",
+          "note": "A doctorate and license are required; high pay but heavy debt."
+        }
+      ],
+      "skills": [
+        "Precision",
+        "Chemistry & biology",
+        "Communication",
+        "Ethics"
+      ],
+      "forage": "Shadow a retail or hospital pharmacist to see the difference.",
+      "mentor": {
+        "name": "Nadia F.",
+        "role": "Hospital Pharmacist, 8 yrs in",
+        "quote": "The pay is excellent, but you stand all day and accuracy is life-or-death.",
+        "day": [
+          "7:30 — Review and verify medication orders.",
+          "10:00 — Advise doctors on dosing.",
+          "1:00 — Check prescriptions for dangerous interactions.",
+          "4:00 — Counsel patients on their medications."
+        ],
+        "loved": "Catching a dangerous drug interaction before it reaches a patient.",
+        "hard": "Long days on your feet, and zero room for error.",
+        "advice": "Get a pharmacy-tech job in high school — it confirms the fit and helps applications."
+      }
+    },
+    {
+      "id": "paramedic",
+      "name": "Paramedic / EMT",
+      "emoji": "🚑",
+      "cluster": "Healthcare",
+      "median": "$53,180",
+      "range": "$33k – $77k",
+      "outlook": "Much faster than avg",
+      "bls": "https://www.bls.gov/ooh/healthcare/emts-and-paramedics.htm",
+      "paths": [
+        {
+          "label": "EMT certificate",
+          "years": "1–6 mo",
+          "cost": "$1k–$3k",
+          "note": "Very fast, cheap entry; start saving lives within a year."
+        },
+        {
+          "label": "Paramedic program",
+          "years": "1–2 yrs",
+          "cost": "$5k–$15k",
+          "note": "More training and higher pay than basic EMT."
+        }
+      ],
+      "skills": [
+        "Calm under pressure",
+        "Quick thinking",
+        "Physical strength",
+        "Compassion"
+      ],
+      "forage": "Trades like this aren't on Forage — ride along with a local EMS crew.",
+      "mentor": {
+        "name": "Cole R.",
+        "role": "Paramedic, 6 yrs in",
+        "quote": "You get into this for the moments where minutes truly decide everything.",
+        "day": [
+          "6:00 — Check the ambulance and gear.",
+          "8:30 — First call: a car accident.",
+          "12:00 — Restock between calls, grab food when you can.",
+          "3:00 — A cardiac emergency — full focus."
+        ],
+        "loved": "Being the calm in someone's worst moment, and sometimes saving a life.",
+        "hard": "Hard shifts, tough scenes, and modest pay for the stress.",
+        "advice": "Get your EMT cert first — it's fast and tells you if the work is for you."
+      }
+    },
+    {
+      "id": "veterinarian",
+      "name": "Veterinarian",
+      "emoji": "🐾",
+      "cluster": "Healthcare",
+      "median": "$125,510",
+      "range": "$80k – $200k+",
+      "outlook": "Much faster than avg",
+      "bls": "https://www.bls.gov/ooh/healthcare/veterinarians.htm",
+      "paths": [
+        {
+          "label": "Bachelor's → Doctor of Veterinary Medicine",
+          "years": "8 yrs",
+          "cost": "$150k–$300k+",
+          "note": "As competitive as med school, with similar debt."
+        }
+      ],
+      "skills": [
+        "Love of animals",
+        "Science aptitude",
+        "Emotional resilience",
+        "Steady hands"
+      ],
+      "forage": "Volunteer at a clinic or shelter — it's required for vet-school applications.",
+      "mentor": {
+        "name": "Priscilla D.",
+        "role": "Small-animal Vet, 7 yrs in",
+        "quote": "I love the animals; the hard part is the owners and the emotional toll.",
+        "day": [
+          "8:30 — Morning surgeries (spays, dentals).",
+          "11:00 — See sick pets and give vaccines.",
+          "2:00 — Tough conversations with worried owners.",
+          "4:30 — Charts, callbacks, lab results."
+        ],
+        "loved": "Sending a sick pet home healthy to a happy family.",
+        "hard": "Euthanasia days are brutal, and vet-school debt is heavy.",
+        "advice": "Volunteer at a shelter or clinic now — you need the hours and the reality check."
+      }
+    },
+    {
+      "id": "plumber",
+      "name": "Plumber",
+      "emoji": "🔧",
+      "cluster": "Skilled Trades",
+      "median": "$62,970",
+      "range": "$40k – $105k",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/construction-and-extraction/plumbers-pipefitters-and-steamfitters.htm",
+      "paths": [
+        {
+          "label": "Paid apprenticeship",
+          "years": "4–5 yrs",
+          "cost": "Earn while you learn (≈ $0 debt)",
+          "note": "Get paid to train; no degree needed. Owners can earn a lot."
+        }
+      ],
+      "skills": [
+        "Problem solving",
+        "Working with your hands",
+        "Math",
+        "Customer service"
+      ],
+      "forage": "Not on Forage — shadow a local plumbing company for a day.",
+      "mentor": {
+        "name": "Sal V.",
+        "role": "Master Plumber, 12 yrs in",
+        "quote": "People will always need plumbers, the work can't be outsourced, and I own my business.",
+        "day": [
+          "7:00 — Drive to the first service call.",
+          "8:00 — Diagnose and fix a leak.",
+          "11:00 — Install fixtures on a remodel.",
+          "2:00 — Emergency call: a burst pipe."
+        ],
+        "loved": "Recession-proof work, no debt, and I run my own crew now.",
+        "hard": "Dirty jobs, tight spaces, and the occasional 2 a.m. emergency.",
+        "advice": "Apply to a union apprenticeship — they pay you to learn the trade."
+      }
+    },
+    {
+      "id": "hvac-tech",
+      "name": "HVAC Technician",
+      "emoji": "❄️",
+      "cluster": "Skilled Trades",
+      "median": "$59,810",
+      "range": "$38k – $94k",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/installation-maintenance-and-repair/heating-air-conditioning-and-refrigeration-mechanics-and-installers.htm",
+      "paths": [
+        {
+          "label": "Trade school + apprenticeship",
+          "years": "6 mo – 2 yrs",
+          "cost": "$1k–$15k",
+          "note": "Short, affordable training and steady year-round demand."
+        }
+      ],
+      "skills": [
+        "Mechanical aptitude",
+        "Troubleshooting",
+        "Comfort in heat/cold",
+        "Customer service"
+      ],
+      "forage": "Not on Forage — visit an HVAC trade-school open house.",
+      "mentor": {
+        "name": "Manny G.",
+        "role": "HVAC Tech, 8 yrs in",
+        "quote": "Everyone needs heating and cooling, so I'm busy in every season.",
+        "day": [
+          "7:30 — Load the van, head to the first call.",
+          "8:30 — Service an A/C unit before summer.",
+          "11:30 — Diagnose a furnace that won't fire.",
+          "2:00 — Install a new thermostat and system."
+        ],
+        "loved": "Steady demand, good pay, and no two days the same.",
+        "hard": "Hot attics in summer, cold roofs in winter.",
+        "advice": "A short trade-school program plus EPA certification gets you working fast."
+      }
+    },
+    {
+      "id": "carpenter",
+      "name": "Carpenter",
+      "emoji": "🔨",
+      "cluster": "Skilled Trades",
+      "median": "$58,210",
+      "range": "$37k – $90k",
+      "outlook": "Average growth",
+      "bls": "https://www.bls.gov/ooh/construction-and-extraction/carpenters.htm",
+      "paths": [
+        {
+          "label": "Paid apprenticeship",
+          "years": "3–4 yrs",
+          "cost": "Earn while you learn",
+          "note": "Learn on the job; specialize later for higher pay."
+        }
+      ],
+      "skills": [
+        "Precision",
+        "Math",
+        "Working with your hands",
+        "Stamina"
+      ],
+      "forage": "Not on Forage — ask a local builder or contractor to shadow.",
+      "mentor": {
+        "name": "Owen P.",
+        "role": "Finish Carpenter, 10 yrs in",
+        "quote": "I make things that last for decades, and I never sit at a desk.",
+        "day": [
+          "6:30 — Review blueprints and measure.",
+          "7:30 — Frame walls or build cabinets.",
+          "12:00 — Lunch with the crew.",
+          "1:00 — Trim work and final fitting."
+        ],
+        "loved": "Pointing at finished homes and knowing I built them.",
+        "hard": "Physically demanding, weather-dependent, and hard on the body over time.",
+        "advice": "Try a high-school shop class or a weekend build — you'll know fast if you love it."
+      }
+    },
+    {
+      "id": "auto-tech",
+      "name": "Automotive Technician",
+      "emoji": "🚗",
+      "cluster": "Skilled Trades",
+      "median": "$49,670",
+      "range": "$32k – $79k",
+      "outlook": "Average growth",
+      "bls": "https://www.bls.gov/ooh/installation-maintenance-and-repair/automotive-service-technicians-and-mechanics.htm",
+      "paths": [
+        {
+          "label": "Trade school + ASE certification",
+          "years": "6 mo – 2 yrs",
+          "cost": "$1k–$20k",
+          "note": "EV and hybrid specialists are in growing demand."
+        }
+      ],
+      "skills": [
+        "Mechanical aptitude",
+        "Diagnostics",
+        "Patience",
+        "Always learning"
+      ],
+      "forage": "Not on Forage — visit a dealership or shop and ask to observe.",
+      "mentor": {
+        "name": "Hector M.",
+        "role": "Master Auto Tech, 9 yrs in",
+        "quote": "Modern cars are computers on wheels — diagnostics is the real skill now.",
+        "day": [
+          "8:00 — Run diagnostics on the day's cars.",
+          "10:00 — Replace brakes and rotors.",
+          "1:00 — Chase down an electrical gremlin.",
+          "3:30 — Road-test repairs."
+        ],
+        "loved": "Solving a problem three other shops couldn't figure out.",
+        "hard": "You often buy your own tools, and it's hard on your back and hands.",
+        "advice": "Get ASE certified and specialize in EVs — that's where the money is going."
+      }
+    },
+    {
+      "id": "financial-analyst",
+      "name": "Financial Analyst",
+      "emoji": "💹",
+      "cluster": "Business",
+      "median": "$99,890",
+      "range": "$60k – $170k+",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/business-and-financial/financial-analysts.htm",
+      "paths": [
+        {
+          "label": "B.S. in finance, economics, or accounting",
+          "years": "4 yrs",
+          "cost": "$48k–$190k",
+          "note": "A CFA credential boosts pay and options."
+        }
+      ],
+      "skills": [
+        "Comfort with numbers",
+        "Excel modeling",
+        "Judgment",
+        "Clear writing"
+      ],
+      "forage": "Try the JPMorgan, Citi, or BofA finance simulations on Forage (free).",
+      "mentor": {
+        "name": "Devon S.",
+        "role": "Financial Analyst, 5 yrs in",
+        "quote": "It's storytelling with numbers — the spreadsheet is only half the job.",
+        "day": [
+          "8:30 — Update financial models.",
+          "10:30 — Research a company or market.",
+          "1:00 — Build a slide deck for leadership.",
+          "3:30 — Present a recommendation."
+        ],
+        "loved": "My analysis directly shaping a multi-million-dollar decision.",
+        "hard": "Long hours, and the markets don't care about your weekend plans.",
+        "advice": "Do a Forage finance simulation — it's the exact entry-level work."
+      }
+    },
+    {
+      "id": "marketing-manager",
+      "name": "Marketing Manager",
+      "emoji": "📣",
+      "cluster": "Business",
+      "median": "$157,620",
+      "range": "$80k – $230k+",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/management/advertising-promotions-and-marketing-managers.htm",
+      "paths": [
+        {
+          "label": "Bachelor's + experience",
+          "years": "4 yrs + climb",
+          "cost": "$48k–$190k",
+          "note": "You start as a coordinator and grow into management."
+        }
+      ],
+      "skills": [
+        "Creativity",
+        "Data sense",
+        "Communication",
+        "Leadership"
+      ],
+      "forage": "Try marketing and brand simulations on Forage.",
+      "mentor": {
+        "name": "Ines B.",
+        "role": "Marketing Manager, 8 yrs in",
+        "quote": "Half art, half spreadsheet — you need both the idea and the numbers to back it.",
+        "day": [
+          "9:00 — Review campaign performance.",
+          "10:30 — Brainstorm with the creative team.",
+          "1:00 — Manage budget and approve content.",
+          "3:30 — Present results to executives."
+        ],
+        "loved": "Watching a campaign I built take off and drive real sales.",
+        "hard": "You're judged on numbers that the market partly controls.",
+        "advice": "Start a social account or blog and grow it — that's a real portfolio."
+      }
+    },
+    {
+      "id": "project-manager",
+      "name": "Project Manager",
+      "emoji": "📋",
+      "cluster": "Business",
+      "median": "$98,580",
+      "range": "$60k – $160k",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/business-and-financial/project-management-specialists.htm",
+      "paths": [
+        {
+          "label": "Bachelor's + PMP certification",
+          "years": "4 yrs + cert",
+          "cost": "$48k–$190k",
+          "note": "Many fall into PM from another role; the PMP cert formalizes it."
+        }
+      ],
+      "skills": [
+        "Organization",
+        "Communication",
+        "Calm under pressure",
+        "Herding cats"
+      ],
+      "forage": "Search Forage for project and operations simulations.",
+      "mentor": {
+        "name": "Renee K.",
+        "role": "Project Manager, 7 yrs in",
+        "quote": "My job is to remove obstacles so everyone else can do their best work.",
+        "day": [
+          "9:00 — Stand-up meeting with the team.",
+          "10:00 — Update timelines and budgets.",
+          "1:00 — Unblock a stuck task.",
+          "3:00 — Status update to stakeholders."
+        ],
+        "loved": "Shipping a big project on time with a team that trusts each other.",
+        "hard": "You own the outcome but rarely control all the pieces.",
+        "advice": "Lead a club, event, or group project — that's project management in miniature."
+      }
+    },
+    {
+      "id": "civil-engineer",
+      "name": "Civil Engineer",
+      "emoji": "🏗️",
+      "cluster": "Engineering",
+      "median": "$95,890",
+      "range": "$63k – $150k",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/architecture-and-engineering/civil-engineers.htm",
+      "paths": [
+        {
+          "label": "B.S. in civil engineering + PE license",
+          "years": "4 yrs + exam",
+          "cost": "$48k–$190k",
+          "note": "A Professional Engineer (PE) license raises pay and responsibility."
+        }
+      ],
+      "skills": [
+        "Math & physics",
+        "Problem solving",
+        "Attention to detail",
+        "Teamwork"
+      ],
+      "forage": "Try infrastructure and engineering simulations on Forage.",
+      "mentor": {
+        "name": "Marco T.",
+        "role": "Civil Engineer, 6 yrs in",
+        "quote": "I design the roads and bridges thousands of people use without thinking about it.",
+        "day": [
+          "8:30 — Review design plans and calculations.",
+          "10:30 — Site visit to check construction.",
+          "1:00 — Update drawings in CAD.",
+          "3:30 — Coordinate with contractors."
+        ],
+        "loved": "Driving over a bridge and knowing I helped design it.",
+        "hard": "The degree is math-heavy, and public-safety stakes are high.",
+        "advice": "If you like physics and building things, this is a stable, respected path."
+      }
+    },
+    {
+      "id": "electrical-engineer",
+      "name": "Electrical Engineer",
+      "emoji": "🔌",
+      "cluster": "Engineering",
+      "median": "$111,910",
+      "range": "$72k – $170k",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm",
+      "paths": [
+        {
+          "label": "B.S. in electrical engineering",
+          "years": "4 yrs",
+          "cost": "$48k–$190k",
+          "note": "One of the harder degrees, but in demand across many industries."
+        }
+      ],
+      "skills": [
+        "Strong math",
+        "Physics",
+        "Logical thinking",
+        "Persistence"
+      ],
+      "forage": "Try engineering simulations from tech and energy firms on Forage.",
+      "mentor": {
+        "name": "Yuki S.",
+        "role": "Electrical Engineer, 7 yrs in",
+        "quote": "From phones to power grids, almost every modern thing has an EE behind it.",
+        "day": [
+          "9:00 — Design and simulate a circuit.",
+          "11:00 — Test prototypes in the lab.",
+          "1:30 — Debug why a board isn't working.",
+          "3:30 — Document the design."
+        ],
+        "loved": "Holding a working device that started as a sketch on my notepad.",
+        "hard": "The coursework is genuinely tough — calculus and physics heavy.",
+        "advice": "Build with an Arduino or Raspberry Pi kit to test your interest cheaply."
+      }
+    },
+    {
+      "id": "architect",
+      "name": "Architect",
+      "emoji": "📐",
+      "cluster": "Engineering",
+      "median": "$93,310",
+      "range": "$60k – $140k",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/architecture-and-engineering/architects.htm",
+      "paths": [
+        {
+          "label": "Professional degree + internship + license",
+          "years": "5–7 yrs",
+          "cost": "$60k–$200k",
+          "note": "Requires an accredited degree, paid internship hours, and the ARE exam."
+        }
+      ],
+      "skills": [
+        "Design sense",
+        "Spatial reasoning",
+        "Math",
+        "Patience"
+      ],
+      "forage": "Shadow at an architecture firm and build a sketch portfolio.",
+      "mentor": {
+        "name": "Lena H.",
+        "role": "Architect, 9 yrs in",
+        "quote": "It's the meeting point of art, engineering, and a whole lot of building codes.",
+        "day": [
+          "9:00 — Sketch and model designs.",
+          "11:00 — Client meeting on a new building.",
+          "1:30 — Detailed drawings and code checks.",
+          "3:30 — Coordinate with engineers."
+        ],
+        "loved": "Walking into a finished building I imagined years earlier.",
+        "hard": "Long path to licensure, and early-career pay is modest.",
+        "advice": "Take art and drafting classes and build a portfolio of sketches and models."
+      }
+    },
+    {
+      "id": "teacher",
+      "name": "High School Teacher",
+      "emoji": "🍎",
+      "cluster": "Education",
+      "median": "$65,220",
+      "range": "$46k – $103k",
+      "outlook": "Average growth",
+      "bls": "https://www.bls.gov/ooh/education-training-and-library/high-school-teachers.htm",
+      "paths": [
+        {
+          "label": "Bachelor's + teaching license",
+          "years": "4 yrs + cert",
+          "cost": "$40k–$120k",
+          "note": "Public-school teaching requires a state license."
+        }
+      ],
+      "skills": [
+        "Patience",
+        "Communication",
+        "Subject passion",
+        "Organization"
+      ],
+      "forage": "Volunteer to tutor or assist a classroom to test the fit.",
+      "mentor": {
+        "name": "Mr. Ellis",
+        "role": "HS History Teacher, 11 yrs in",
+        "quote": "The summers and the kids are the reward; the pay and the paperwork are the trade-off.",
+        "day": [
+          "7:30 — Prep and set up the classroom.",
+          "8:15 — Teach four class periods.",
+          "12:30 — Grade and plan during your one free period.",
+          "3:30 — Tutoring, clubs, or coaching."
+        ],
+        "loved": "A former student coming back to say I changed their path.",
+        "hard": "Pay is modest and the workload spills into evenings.",
+        "advice": "Tutor or assist a teacher now — it's the truest test of whether you'll love it."
+      }
+    },
+    {
+      "id": "police-officer",
+      "name": "Police Officer",
+      "emoji": "👮",
+      "cluster": "Public Service",
+      "median": "$74,910",
+      "range": "$45k – $115k",
+      "outlook": "Average growth",
+      "bls": "https://www.bls.gov/ooh/protective-service/police-and-detectives.htm",
+      "paths": [
+        {
+          "label": "Police academy (HS diploma; some require college)",
+          "years": "4–7 mo academy",
+          "cost": "Often paid training",
+          "note": "Many departments pay you to attend the academy."
+        }
+      ],
+      "skills": [
+        "Judgment",
+        "Communication",
+        "Physical fitness",
+        "Staying calm"
+      ],
+      "forage": "Not on Forage — ask your local department about ride-along programs.",
+      "mentor": {
+        "name": "Officer Reyes",
+        "role": "Patrol Officer, 8 yrs in",
+        "quote": "Most of the job is talking to people and solving problems, not what you see on TV.",
+        "day": [
+          "6:00 — Briefing and gear check.",
+          "7:00 — Patrol and respond to calls.",
+          "12:00 — Write reports (a lot of reports).",
+          "3:00 — Community contact and follow-ups."
+        ],
+        "loved": "Helping someone on the worst day of their life.",
+        "hard": "Shift work, real danger, and intense public scrutiny.",
+        "advice": "Do a ride-along and look into Police Explorer programs for teens."
+      }
+    },
+    {
+      "id": "firefighter",
+      "name": "Firefighter",
+      "emoji": "🚒",
+      "cluster": "Public Service",
+      "median": "$57,120",
+      "range": "$33k – $95k",
+      "outlook": "Average growth",
+      "bls": "https://www.bls.gov/ooh/protective-service/firefighters.htm",
+      "paths": [
+        {
+          "label": "Fire academy + EMT certification",
+          "years": "6 mo – 2 yrs",
+          "cost": "$1k–$10k",
+          "note": "Most firefighters are also certified EMTs."
+        }
+      ],
+      "skills": [
+        "Physical fitness",
+        "Teamwork",
+        "Courage",
+        "Staying calm"
+      ],
+      "forage": "Not on Forage — look into volunteer fire departments and cadet programs.",
+      "mentor": {
+        "name": "Captain Doyle",
+        "role": "Firefighter, 13 yrs in",
+        "quote": "The brotherhood and the calls keep you in; the sleep schedule tests you.",
+        "day": [
+          "7:00 — Check the rig and equipment.",
+          "9:00 — Drills and training.",
+          "1:00 — Medical and fire calls as they come.",
+          "Evening — Cook with the crew; sleep at the station."
+        ],
+        "loved": "The team feels like family, and the work genuinely matters.",
+        "hard": "24-hour shifts, real danger, and hard things you can't unsee.",
+        "advice": "Get EMT-certified and volunteer — it's the standard way in."
+      }
+    },
+    {
+      "id": "lawyer",
+      "name": "Lawyer",
+      "emoji": "⚖️",
+      "cluster": "Legal",
+      "median": "$151,160",
+      "range": "$70k – $250k+",
+      "outlook": "Average growth",
+      "bls": "https://www.bls.gov/ooh/legal/lawyers.htm",
+      "paths": [
+        {
+          "label": "Bachelor's → Law School (JD) → Bar exam",
+          "years": "7 yrs",
+          "cost": "$100k–$300k+",
+          "note": "Three years of law school plus the bar; debt can be heavy."
+        }
+      ],
+      "skills": [
+        "Reading & writing",
+        "Argument",
+        "Research",
+        "Attention to detail"
+      ],
+      "forage": "Try the legal simulations from firms on Forage.",
+      "mentor": {
+        "name": "Aisha R.",
+        "role": "Attorney, 6 yrs in",
+        "quote": "It's far more reading and writing than dramatic courtroom speeches.",
+        "day": [
+          "8:30 — Research case law.",
+          "10:30 — Draft contracts or briefs.",
+          "1:00 — Client calls and strategy.",
+          "3:30 — More writing and document review."
+        ],
+        "loved": "Winning a case that genuinely changed a client's life.",
+        "hard": "Long hours, heavy debt, and a competitive job market.",
+        "advice": "Join debate, and intern at a law office to see the real (paperwork-heavy) day."
+      }
+    },
+    {
+      "id": "graphic-designer",
+      "name": "Graphic Designer",
+      "emoji": "🖌️",
+      "cluster": "Design + Arts",
+      "median": "$61,300",
+      "range": "$38k – $100k",
+      "outlook": "Average growth",
+      "bls": "https://www.bls.gov/ooh/arts-and-design/graphic-designers.htm",
+      "paths": [
+        {
+          "label": "Bachelor's in design",
+          "years": "4 yrs",
+          "cost": "$48k–$190k",
+          "note": "Helps, but your portfolio matters far more."
+        },
+        {
+          "label": "Self-taught + portfolio",
+          "years": "varies",
+          "cost": "$0–$5k",
+          "note": "Very viable — clients and employers hire on your work."
+        }
+      ],
+      "skills": [
+        "Visual taste",
+        "Creativity",
+        "Adobe / Figma",
+        "Taking feedback"
+      ],
+      "forage": "Search Forage for design and creative experiences.",
+      "mentor": {
+        "name": "Theo M.",
+        "role": "Graphic Designer, 8 yrs in",
+        "quote": "Nobody asks for your diploma — they ask to see your portfolio.",
+        "day": [
+          "9:30 — Sketch concepts for a client.",
+          "11:00 — Design in Illustrator and Figma.",
+          "1:30 — Revise based on feedback.",
+          "3:30 — Prepare final files for print or web."
+        ],
+        "loved": "Seeing my design on a product, poster, or screen in the real world.",
+        "hard": "Lots of subjective feedback, and freelancing income can be uneven.",
+        "advice": "Redesign logos or posters you dislike and post them — that's your portfolio."
+      }
+    },
+    {
+      "id": "chef",
+      "name": "Chef",
+      "emoji": "🍳",
+      "cluster": "Culinary",
+      "median": "$58,920",
+      "range": "$37k – $90k",
+      "outlook": "Faster than avg",
+      "bls": "https://www.bls.gov/ooh/food-preparation-and-serving/chefs-and-head-cooks.htm",
+      "paths": [
+        {
+          "label": "Work up from the kitchen",
+          "years": "varies",
+          "cost": "≈ $0 (earn while you learn)",
+          "note": "Many top chefs never went to culinary school."
+        },
+        {
+          "label": "Culinary school",
+          "years": "1–4 yrs",
+          "cost": "$10k–$120k",
+          "note": "Optional; faster path to leadership roles for some."
+        }
+      ],
+      "skills": [
+        "Creativity",
+        "Speed under pressure",
+        "Leadership",
+        "Stamina"
+      ],
+      "forage": "Not on Forage — get a kitchen job; it's the real training.",
+      "mentor": {
+        "name": "Chef Bianca",
+        "role": "Head Chef, 12 yrs in",
+        "quote": "It's hot, fast, and exhausting — and I wouldn't trade the rush for anything.",
+        "day": [
+          "10:00 — Prep ingredients and check inventory.",
+          "12:00 — Lunch service rush.",
+          "3:00 — Plan the menu and order supplies.",
+          "6:00 — Dinner service — the nightly marathon."
+        ],
+        "loved": "The energy of a packed dinner service that goes perfectly.",
+        "hard": "Nights, weekends, holidays, low early pay, and serious heat.",
+        "advice": "Get a job in any kitchen — that's where you learn if you can take the heat."
       }
     }
   ]
