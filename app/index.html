@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CareerQuest — Try the Major Before You Pay for It</title>
+<style>
+  :root{
+    --bg:#0e1020; --bg2:#171a33; --card:#1d2142; --card2:#252a52;
+    --ink:#eef0ff; --muted:#a3a8d4; --line:#33386b;
+    --accent:#5ce1b9; --accent2:#7c8cff; --gold:#ffd166; --warn:#ff6b8b;
+    --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35);
+    font-synthesis:none;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#23284f 0%,var(--bg) 55%);
+    color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.5}
+  a{color:var(--accent2)}
+  button{font-family:inherit;cursor:pointer}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+
+  /* HUD */
+  header.hud{position:sticky;top:0;z-index:30;background:rgba(14,16,32,.82);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .hud-row{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:20px;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
+  .logo .dot{color:var(--accent)}
+  .hud-stats{display:flex;align-items:center;gap:18px;margin-left:auto;flex-wrap:wrap}
+  .lvl{display:flex;align-items:center;gap:8px;font-weight:700}
+  .lvl .badge{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#06121a;
+    width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:15px}
+  .xpbar{width:200px;height:10px;background:var(--card);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+  .xpbar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%}
+  .xp-text{font-size:13px;color:var(--muted)}
+  .reset{background:transparent;border:1px solid var(--line);color:var(--muted);
+    padding:7px 12px;border-radius:10px;font-size:12px}
+  .reset:hover{color:var(--ink);border-color:var(--warn)}
+
+  /* generic */
+  h1,h2,h3{line-height:1.2}
+  .pill{display:inline-block;background:var(--card);border:1px solid var(--line);
+    padding:4px 10px;border-radius:99px;font-size:12px;color:var(--muted)}
+  .btn{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#06121a;border:none;
+    padding:11px 18px;border-radius:12px;font-weight:700;font-size:14px}
+  .btn.secondary{background:var(--card2);color:var(--ink);border:1px solid var(--line)}
+  .btn:hover{filter:brightness(1.06)}
+  .muted{color:var(--muted)}
+
+  /* hero */
+  .hero{padding:40px 0 18px}
+  .hero h1{font-size:34px;margin:0 0 8px}
+  .hero p{color:var(--muted);max-width:680px;margin:0}
+
+  /* career grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+  .ccard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px;transition:.15s;cursor:pointer;position:relative}
+  .ccard:hover{transform:translateY(-3px);border-color:var(--accent2);box-shadow:var(--shadow)}
+  .ccard .emoji{font-size:30px}
+  .ccard h3{margin:8px 0 2px;font-size:17px}
+  .ccard .cl{font-size:12px;color:var(--muted)}
+  .ccard .pay{margin-top:10px;font-weight:700;color:var(--accent)}
+  .ccard .done-tag{position:absolute;top:10px;right:10px;font-size:11px;background:var(--accent);
+    color:#06121a;padding:2px 8px;border-radius:99px;font-weight:700}
+
+  /* mission control */
+  .banner{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--line);
+    border-radius:var(--radius);padding:20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  .banner .big{font-size:46px}
+  .banner h2{margin:0 0 4px}
+  .stat-row{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px}
+  .stat .k{font-size:12px;color:var(--muted)}
+  .stat .v{font-weight:700;font-size:16px}
+  .stat .v.pay{color:var(--accent)}
+
+  .board{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+  @media(max-width:860px){.board{grid-template-columns:1fr}}
+  .col h3{font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:0 0 10px}
+  .col.recon h3{color:var(--accent)}
+  .col.field h3{color:var(--accent2)}
+  .col.reality h3{color:var(--gold)}
+  .quest{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;transition:.15s}
+  .quest:hover{border-color:var(--accent2)}
+  .quest.done{opacity:.72;border-color:var(--accent)}
+  .quest .qtop{display:flex;justify-content:space-between;align-items:start;gap:8px}
+  .quest .qicon{font-size:20px}
+  .quest .xp{font-size:11px;font-weight:700;color:var(--gold);white-space:nowrap}
+  .quest h4{margin:8px 0 4px;font-size:15px}
+  .quest p{margin:0 0 12px;font-size:13px;color:var(--muted)}
+  .quest .check{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--accent);font-weight:700}
+
+  /* badges */
+  .badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+  .bdg{width:96px;text-align:center;opacity:.32;filter:grayscale(1);transition:.2s}
+  .bdg.earned{opacity:1;filter:none}
+  .bdg .ring{width:64px;height:64px;margin:0 auto 6px;border-radius:50%;display:grid;place-items:center;
+    font-size:26px;background:var(--card);border:2px solid var(--line)}
+  .bdg.earned .ring{border-color:var(--gold);box-shadow:0 0 18px rgba(255,209,102,.35)}
+  .bdg small{font-size:11px;color:var(--muted);display:block}
+
+  section.block{margin:34px 0}
+  section.block > h3.shead{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin:0 0 12px}
+
+  /* modal */
+  .scrim{position:fixed;inset:0;background:rgba(4,6,16,.7);backdrop-filter:blur(4px);
+    display:none;align-items:center;justify-content:center;z-index:50;padding:18px}
+  .scrim.open{display:flex}
+  .modal{background:var(--bg2);border:1px solid var(--line);border-radius:18px;max-width:680px;width:100%;
+    max-height:88vh;overflow:auto;box-shadow:var(--shadow)}
+  .modal .mhead{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg2)}
+  .modal .mhead h3{margin:0;font-size:18px}
+  .modal .mbody{padding:22px}
+  .x{background:transparent;border:none;color:var(--muted);font-size:24px;line-height:1}
+  .x:hover{color:var(--ink)}
+
+  /* day in life */
+  .timeline{list-style:none;padding:0;margin:14px 0}
+  .timeline li{padding:8px 0 8px 18px;border-left:2px solid var(--line);position:relative;color:var(--ink);font-size:14px}
+  .timeline li::before{content:'';position:absolute;left:-6px;top:14px;width:10px;height:10px;border-radius:50%;background:var(--accent2)}
+  .qa{background:var(--card);border-radius:12px;padding:12px 14px;margin:10px 0}
+  .qa .lab{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+
+  /* form */
+  label.fld{display:block;margin:12px 0 4px;font-size:13px;color:var(--muted)}
+  input,select,textarea{width:100%;background:var(--card);border:1px solid var(--line);color:var(--ink);
+    border-radius:10px;padding:10px 12px;font-size:14px;font-family:inherit}
+  textarea{min-height:90px;resize:vertical}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:560px){.two{grid-template-columns:1fr}}
+  .result{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:16px;display:none}
+  .result.show{display:block}
+  .result .big-num{font-size:30px;font-weight:800}
+  .rrow{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px}
+  .rrow:last-child{border-bottom:none}
+  .rrow b{font-weight:700}
+  .verdict-good{color:var(--accent)} .verdict-warn{color:var(--gold)} .verdict-bad{color:var(--warn)}
+  .disclaimer{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.5}
+
+  .dir-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .dir-item:last-child{border-bottom:none}
+  .dir-item .di-emoji{font-size:22px}
+  .dir-item h4{margin:0 0 2px;font-size:15px}
+  .dir-item p{margin:0;font-size:13px;color:var(--muted)}
+  .scriptbox{background:#0b0d1c;border:1px dashed var(--line);border-radius:10px;padding:12px;font-size:13px;white-space:pre-wrap;margin-top:8px}
+  .copy{margin-top:8px}
+  .opt{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);
+    color:var(--ink);padding:11px 14px;border-radius:10px;margin:8px 0;font-size:14px}
+  .opt:hover{border-color:var(--accent2)}
+  .opt.correct{border-color:var(--accent);background:rgba(92,225,185,.12)}
+  .opt.wrong{border-color:var(--warn);background:rgba(255,107,139,.12)}
+
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(120px);
+    background:linear-gradient(135deg,var(--accent2),var(--accent));color:#06121a;font-weight:700;
+    padding:12px 22px;border-radius:99px;box-shadow:var(--shadow);transition:.35s;z-index:80;font-size:14px}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+  footer{padding:30px 0 60px;color:var(--muted);font-size:13px;text-align:center}
+  .backlink{background:none;border:none;color:var(--muted);font-size:13px;padding:0;margin-bottom:14px}
+  .backlink:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap hud-row">
+    <div class="logo">🧭 Career<span class="dot">Quest</span></div>
+    <div class="hud-stats">
+      <div class="lvl"><span class="badge" id="lvlBadge">1</span><span id="lvlTitle">Rookie</span></div>
+      <div>
+        <div class="xpbar"><i id="xpFill"></i></div>
+        <div class="xp-text"><span id="xpNow">0</span> / <span id="xpNext">100</span> XP &nbsp;•&nbsp; <span id="exploredCount">0</span> explored</div>
+      </div>
+      <button class="reset" id="resetBtn">Reset</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- VIEW: SELECT -->
+  <section id="selectView">
+    <div class="hero">
+      <span class="pill">Mission 1 of your future</span>
+      <h1>Try the major <em>before</em> you spend four years and $100k on it.</h1>
+      <p>Pick a career below. Then complete quests to meet people who live in that world, run the real cost-vs-salary math, and decide if it's worth it — all before you ever apply.</p>
+    </div>
+    <h3 class="shead">Choose a world to explore</h3>
+    <div class="grid" id="careerGrid"></div>
+  </section>
+
+  <!-- VIEW: MISSION -->
+  <section id="missionView" style="display:none">
+    <button class="backlink" id="backBtn">← Back to all careers</button>
+    <div class="banner">
+      <div class="big" id="mEmoji">💻</div>
+      <div style="flex:1;min-width:220px">
+        <span class="pill" id="mCluster">Technology</span>
+        <h2 id="mName">Career</h2>
+        <div class="stat-row">
+          <div class="stat"><div class="k">Median pay (U.S.)</div><div class="v pay" id="mPay">—</div></div>
+          <div class="stat"><div class="k">Typical range</div><div class="v" id="mRange">—</div></div>
+          <div class="stat"><div class="k">Job outlook</div><div class="v" id="mOutlook">—</div></div>
+        </div>
+        <div style="margin-top:10px"><a id="mBls" href="#" target="_blank" rel="noopener">Verify these numbers on BLS.gov ↗</a></div>
+      </div>
+    </div>
+
+    <div class="board">
+      <div class="col recon">
+        <h3>🔍 Recon</h3>
+        <div id="colRecon"></div>
+      </div>
+      <div class="col field">
+        <h3>🤝 Field Work</h3>
+        <div id="colField"></div>
+      </div>
+      <div class="col reality">
+        <h3>⚖️ Reality Check</h3>
+        <div id="colReality"></div>
+      </div>
+    </div>
+
+    <section class="block">
+      <h3 class="shead">Badges</h3>
+      <div class="badges" id="badgeRow"></div>
+    </section>
+  </section>
+</main>
+
+<footer class="wrap">
+  Salaries are illustrative U.S. national medians from the BLS Occupational Outlook Handbook (May 2024). Always verify current local figures. CareerQuest is an educational tool, not financial advice.
+</footer>
+
+<!-- MODAL -->
+<div class="scrim" id="scrim">
+  <div class="modal">
+    <div class="mhead"><h3 id="modalTitle">Title</h3><button class="x" id="closeModal">×</button></div>
+    <div class="mbody" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast">+20 XP</div>
+
+<script>
+/* ---------------- DATA ---------------- */
+const CAREERS = [
+  {id:"software-dev",name:"Software Developer",emoji:"💻",cluster:"Technology",median:"$133,080",range:"$74k – $208k+",outlook:"Much faster than avg",
+   bls:"https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
+   paths:[{label:"B.S. Computer Science",years:"4 yrs",cost:"$48k–$190k",note:"Traditional route. Internships matter more than GPA."},
+          {label:"Coding bootcamp",years:"3–9 mo",cost:"$0–$20k",note:"Faster and cheaper, but you must build a portfolio."},
+          {label:"Self-taught + projects",years:"varies",cost:"~$0",note:"Hardest path to a first job, but real for the disciplined."}],
+   skills:["Problem solving","Logic","Patience for debugging","Communication"],
+   forage:"Try the JPMorgan Software Engineering or Wells Fargo simulations on Forage (free).",
+   mentor:{name:"Priya R.",role:"Backend Developer, 6 yrs in",quote:"Nobody tells you 70% of the job is reading other people's code and sitting in meetings.",
+     day:["9:00 — Stand-up meeting, say what I'm working on (2 min).","9:30 — Code. Mostly fixing a bug a customer reported.","12:30 — Lunch, usually at my desk reading docs.","1:30 — Code review: read a teammate's work, leave comments.","4:00 — Meeting about next month's features.","5:30 — Push my code, log off."],
+     loved:"Building something and watching thousands use it the next day.",hard:"Imposter syndrome is real. Tech changes constantly — you never stop learning.",advice:"Build one tiny app this month. You'll learn more than a semester of theory."}},
+  {id:"registered-nurse",name:"Registered Nurse",emoji:"🩺",cluster:"Healthcare",median:"$93,600",range:"$66k – $135k",outlook:"Faster than avg",
+   bls:"https://www.bls.gov/ooh/healthcare/registered-nurses.htm",
+   paths:[{label:"BSN (Bachelor's)",years:"4 yrs",cost:"$40k–$120k",note:"Preferred by hospitals; opens more doors."},
+          {label:"ADN (Associate)",years:"2 yrs",cost:"$6k–$40k",note:"Faster, cheaper way in; bridge to BSN later while working."}],
+   skills:["Empathy","Calm under pressure","Attention to detail","Stamina"],
+   forage:"Search Forage for healthcare and life-sciences experiences.",
+   mentor:{name:"Marcus T.",role:"ER Nurse, 8 yrs in",quote:"It is physically and emotionally hard, and also the most meaningful work I can imagine.",
+     day:["6:45 — Get report from the night shift.","7:30 — Med pass, check vitals, chart everything.","10:00 — A trauma comes in. Everything else waits.","1:00 — Eat half a sandwich standing up.","3:00 — Discharge one patient, admit another.","7:15 — Hand off to next shift. 12-hour day done."],
+     loved:"A patient hugged me and said I made the scariest day of their life bearable.",hard:"12-hour shifts on your feet, nights and weekends, and you see people on their worst days.",advice:"Volunteer or get a CNA job in high school. You'll know within a month if it's for you."}},
+  {id:"electrician",name:"Electrician",emoji:"⚡",cluster:"Skilled Trades",median:"$61,590",range:"$39k – $104k",outlook:"Faster than avg",
+   bls:"https://www.bls.gov/ooh/construction-and-extraction/electricians.htm",
+   paths:[{label:"Paid apprenticeship",years:"4–5 yrs",cost:"Earn while you learn (≈ $0 debt)",note:"You get PAID to train. No degree required."},
+          {label:"Trade school + apprenticeship",years:"1 yr + hours",cost:"$5k–$15k",note:"Short program first, then apprentice hours."}],
+   skills:["Working with your hands","Math","Safety focus","Spatial reasoning"],
+   forage:"Trades aren't on Forage — book a real job-shadow with a local contractor instead.",
+   mentor:{name:"Dee W.",role:"Journeyman Electrician, 11 yrs in",quote:"I have zero student debt and own a house. My friends with degrees are still paying theirs off.",
+     day:["6:30 — Load the van, drive to the job site.","7:00 — Pull wire and set boxes for a new building.","10:00 — Troubleshoot a circuit that won't pass inspection.","12:00 — Lunch from the cooler with the crew.","1:00 — Run conduit, label the panel.","3:30 — Clean up, plan tomorrow, head home."],
+     loved:"I can point at buildings and say 'I wired that.' And the pay is solid with no debt.",hard:"Hot attics, cold crawlspaces, early mornings. Your body is your tool — protect it.",advice:"Call three local electrical contractors and ask to shadow for a day. Most say yes."}},
+  {id:"mechanical-engineer",name:"Mechanical Engineer",emoji:"⚙️",cluster:"Engineering",median:"$99,510",range:"$64k – $157k",outlook:"Faster than avg",
+   bls:"https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
+   paths:[{label:"B.S. Mechanical Engineering",years:"4 yrs",cost:"$48k–$190k",note:"Required. Heavy math and physics — be honest about that."}],
+   skills:["Math & physics","CAD software","Curiosity about how things work","Teamwork"],
+   forage:"Try engineering simulations on Forage from companies like GE or Lockheed.",
+   mentor:{name:"Sofia L.",role:"Mechanical Engineer (HVAC), 5 yrs in",quote:"Real engineering is 80% spreadsheets and emails, 20% the cool design stuff from class.",
+     day:["8:30 — Check email, review a contractor's questions.","9:30 — Design work in CAD, size equipment for a building.","11:30 — Site visit to check an install.","1:30 — Calculations and a report.","3:30 — Team meeting on project schedule.","5:00 — Wrap up the report, log off."],
+     loved:"I designed a system that keeps a whole hospital comfortable. That's real impact.",hard:"The degree is genuinely hard. Many start engineering and switch out freshman year.",advice:"If calculus excites you more than it scares you, this could be your path."}},
+  {id:"ux-designer",name:"UX / Web Designer",emoji:"🎨",cluster:"Design + Tech",median:"$98,540",range:"$45k – $150k",outlook:"Faster than avg",
+   bls:"https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm",
+   paths:[{label:"Bachelor's (design/HCI)",years:"4 yrs",cost:"$48k–$190k",note:"Helps, but a strong portfolio beats a degree here."},
+          {label:"Bootcamp/certificate + portfolio",years:"3–12 mo",cost:"$0–$15k",note:"Very viable. Employers hire on portfolio, not diploma."}],
+   skills:["Visual taste","Empathy for users","Figma","Communicating ideas"],
+   forage:"Search Forage for design and product experiences.",
+   mentor:{name:"Jordan K.",role:"Product Designer, 7 yrs in",quote:"Your portfolio is your degree. I've hired people with no college and turned down master's grads.",
+     day:["9:00 — Review user feedback on a feature.","10:00 — Sketch and design screens in Figma.","12:00 — Present designs to engineers and PMs.","1:30 — Revise based on feedback.","3:00 — User-testing call, watch someone use the product.","4:30 — Document decisions, hand off to engineering."],
+     loved:"Watching a confused user suddenly 'get it' because of something I designed.",hard:"Everyone has an opinion on design, so you defend your choices constantly.",advice:"Redesign an app you hate. Put it online. That's the start of a portfolio."}},
+  {id:"physician",name:"Physician",emoji:"👩‍⚕️",cluster:"Healthcare",median:"$239,200+",range:"$170k – $400k+",outlook:"Faster than avg",
+   bls:"https://www.bls.gov/ooh/healthcare/physicians-and-surgeons.htm",
+   paths:[{label:"Bachelor's → Med School → Residency",years:"11–15 yrs",cost:"$200k–$400k+ debt common",note:"Long, expensive, intense. High pay comes much later."}],
+   skills:["Top-tier discipline","Science aptitude","Emotional resilience","Delayed gratification"],
+   forage:"Shadow a doctor and volunteer in a hospital before committing to this path.",
+   mentor:{name:"Dr. Amir H.",role:"Family Medicine, attending",quote:"I love it now, but I gave up my whole 20s and finished training with $280k in debt.",
+     day:["7:30 — Review the day's patient charts.","8:00 — See patients every 15–20 minutes.","12:00 — Quick lunch while finishing notes.","1:00 — More patients, plus calls and refills.","5:00 — Charting that didn't get done during the day.","6:30 — Finally home."],
+     loved:"I've delivered babies and caught cancers early. The trust patients give you is sacred.",hard:"The path is 11+ years and huge debt. Burnout is common. Be sure before you start.",advice:"Shadow a doctor for a week. Volunteer in an ER. Love the reality, not the TV version."}},
+  {id:"welder",name:"Welder",emoji:"🔥",cluster:"Skilled Trades",median:"$50,460",range:"$37k – $72k+",outlook:"Steady; high demand for skilled welders",
+   bls:"https://www.bls.gov/ooh/production/welders-cutters-solderers-and-brazers.htm",
+   paths:[{label:"Trade school / certificate",years:"6–18 mo",cost:"$5k–$15k",note:"Short and cheap. Pipe & underwater welders earn far more."},
+          {label:"Apprenticeship",years:"varies",cost:"Earn while learning",note:"On-the-job training, little to no debt."}],
+   skills:["Steady hands","Focus","Comfort with heat/sparks","Reading blueprints"],
+   forage:"Not on Forage — visit a welding school open house or shadow a fab shop.",
+   mentor:{name:"Ray P.",role:"Pipe Welder, 9 yrs in",quote:"Certified pipe and underwater welders can clear six figures. The ceiling is higher than people think.",
+     day:["6:00 — Gear up, review the day's blueprints.","6:30 — Set up the rig and start laying beads.","10:00 — Inspector checks my welds with X-ray.","12:00 — Lunch with the crew.","12:45 — Back to welding, different position.","3:30 — Clean station, log work, head out."],
+     loved:"Specialty welding pays incredibly well and I'm never bored. Every job is different.",hard:"Sparks, heat, and you must protect your eyes and lungs. Travel can be heavy.",advice:"Take a welding class at a community college. You'll know fast if you have the hands for it."}},
+  {id:"accountant",name:"Accountant",emoji:"📊",cluster:"Business",median:"$81,680",range:"$50k – $138k",outlook:"Average growth",
+   bls:"https://www.bls.gov/ooh/business-and-financial/accountants-and-auditors.htm",
+   paths:[{label:"B.S. Accounting + CPA",years:"4 yrs + exam",cost:"$48k–$190k",note:"CPA license boosts pay and options significantly."}],
+   skills:["Comfort with numbers","Organization","Ethics","Attention to detail"],
+   forage:"Try the PwC, KPMG, or Deloitte simulations on Forage (free).",
+   mentor:{name:"Hannah B.",role:"Staff Accountant, 4 yrs in",quote:"Stable, well-paid, in demand everywhere — but 'busy season' means 60-hour weeks.",
+     day:["8:30 — Coffee, review client emails.","9:00 — Reconcile accounts, check the numbers.","11:00 — Call with a client about their books.","12:30 — Lunch out (except in busy season).","1:30 — Prepare financial statements.","5:00 — Done — except Jan–April, when it's 7pm+."],
+     loved:"Every business needs this, so I have huge job security and can work anywhere.",hard:"Busy season is brutal. It's detail work — small errors matter a lot.",advice:"Do a Forage accounting simulation this weekend. It mirrors the real entry-level work."}}
+];
+
+const QUESTS = [
+  {id:"day",   group:"recon",  icon:"📖", title:"Read the Day in the Life",       xp:20, desc:"Meet your simulated mentor and see what the job is really like, hour by hour.", action:"mentor"},
+  {id:"money", group:"recon",  icon:"🧮", title:"Run the Money Math",             xp:30, desc:"Use the ROI calculator to weigh the cost of the path against the salary.", action:"roi"},
+  {id:"path",  group:"recon",  icon:"🗺️", title:"Map the Path",                   xp:20, desc:"Study every route in — including ones without four years of debt.", action:"paths"},
+  {id:"interview",group:"field",icon:"🎙️",title:"Book an Informational Interview", xp:40, desc:"Use the directory and script to set up a 20-min chat with a real professional.", action:"directory"},
+  {id:"forage",group:"field",  icon:"🧪", title:"Do a Forage Job Simulation",     xp:50, desc:"Complete a free, company-built simulation — the closest thing to trying the job.", action:"forage"},
+  {id:"shadow",group:"field",  icon:"👥", title:"Shadow a Day",                   xp:40, desc:"Arrange to observe a real professional for a few hours, in person or virtually.", action:"shadow"},
+  {id:"reflect",group:"reality",icon:"💭",title:"The 40-Year Question",           xp:30, desc:"Could you do this most days for decades? Write your honest answer.", action:"reflect"},
+  {id:"quiz", group:"reality", icon:"❓", title:"Cost vs Salary Quiz",            xp:30, desc:"Test whether you actually understand the numbers behind this path.", action:"quiz"},
+  {id:"verdict",group:"reality",icon:"⚖️",title:"Deliver Your Verdict",           xp:30, desc:"Pursue, maybe, or pass — and why. Lock in your decision for this career.", action:"verdict"}
+];
+
+const BADGES = [
+  {id:"scout",   icon:"🔍", name:"Scout",       test:s=>['day','money','path'].every(q=>doneQ(s,q))},
+  {id:"agent",   icon:"🤝", name:"Field Agent", test:s=>['interview','forage','shadow'].every(q=>doneQ(s,q))},
+  {id:"truth",   icon:"⚖️", name:"Truth Seeker",test:s=>['reflect','quiz','verdict'].every(q=>doneQ(s,q))},
+  {id:"roi",     icon:"🧮", name:"ROI Master",  test:s=>s.roiUsed},
+  {id:"explorer",icon:"🧭", name:"Explorer",    test:s=>s.explored.length>=3},
+  {id:"graduate",icon:"🎓", name:"Graduate",    test:s=>QUESTS.every(q=>doneQ(s,q.id))}
+];
+
+const LEVELS=["Rookie","Scout","Pathfinder","Investigator","Strategist","Future-Proofed"];
+
+/* ---------------- STATE ---------------- */
+const KEY="careerquest_v1";
+let S=load();
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||fresh()}catch(e){return fresh()}}
+function fresh(){return{xp:0,explored:[],current:null,quests:{},roiUsed:false,reflections:{},verdicts:{}}}
+function save(){localStorage.setItem(KEY,JSON.stringify(S))}
+function doneQ(s,qid){return s.current&&s.quests[s.current]&&s.quests[s.current][qid]}
+function career(id){return CAREERS.find(c=>c.id===id)}
+
+/* ---------------- HUD ---------------- */
+function level(){return Math.min(LEVELS.length,Math.floor(S.xp/100)+1)}
+function renderHud(){
+  const lv=level();
+  document.getElementById('lvlBadge').textContent=lv;
+  document.getElementById('lvlTitle').textContent=LEVELS[lv-1];
+  const into=S.xp%100;
+  document.getElementById('xpFill').style.width=into+'%';
+  document.getElementById('xpNow').textContent=S.xp;
+  document.getElementById('xpNext').textContent=lv*100;
+  document.getElementById('exploredCount').textContent=S.explored.length;
+}
+function award(xp,msg){S.xp+=xp;save();renderHud();toast(msg||('+'+xp+' XP'));}
+let tT;
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('show'),2200);}
+
+/* ---------------- SELECT VIEW ---------------- */
+function renderGrid(){
+  const g=document.getElementById('careerGrid');g.innerHTML='';
+  CAREERS.forEach(c=>{
+    const explored=S.explored.includes(c.id);
+    const el=document.createElement('div');el.className='ccard';
+    el.innerHTML=`${explored?'<span class="done-tag">explored</span>':''}
+      <div class="emoji">${c.emoji}</div><h3>${c.name}</h3>
+      <div class="cl">${c.cluster}</div><div class="pay">${c.median} / yr</div>`;
+    el.onclick=()=>openCareer(c.id);
+    g.appendChild(el);
+  });
+}
+
+/* ---------------- MISSION VIEW ---------------- */
+function openCareer(id){
+  S.current=id;
+  if(!S.quests[id])S.quests[id]={};
+  if(!S.explored.includes(id))S.explored.push(id);
+  save();
+  const c=career(id);
+  document.getElementById('mEmoji').textContent=c.emoji;
+  document.getElementById('mCluster').textContent=c.cluster;
+  document.getElementById('mName').textContent=c.name;
+  document.getElementById('mPay').textContent=c.median;
+  document.getElementById('mRange').textContent=c.range;
+  document.getElementById('mOutlook').textContent=c.outlook;
+  document.getElementById('mBls').href=c.bls;
+  document.getElementById('selectView').style.display='none';
+  document.getElementById('missionView').style.display='block';
+  renderBoard();renderBadges();renderHud();
+  window.scrollTo(0,0);
+}
+function renderBoard(){
+  const cols={recon:document.getElementById('colRecon'),field:document.getElementById('colField'),reality:document.getElementById('colReality')};
+  Object.values(cols).forEach(c=>c.innerHTML='');
+  QUESTS.forEach(q=>{
+    const done=doneQ(S,q.id);
+    const el=document.createElement('div');el.className='quest'+(done?' done':'');
+    el.innerHTML=`<div class="qtop"><span class="qicon">${q.icon}</span><span class="xp">+${q.xp} XP</span></div>
+      <h4>${q.title}</h4><p>${q.desc}</p>
+      ${done?'<span class="check">✓ Completed</span>':`<button class="btn secondary" style="padding:8px 14px;font-size:13px">Start quest</button>`}`;
+    if(!done)el.querySelector('button').onclick=()=>openQuest(q);
+    else el.onclick=()=>openQuest(q);
+    cols[q.group].appendChild(el);
+  });
+}
+function renderBadges(){
+  const row=document.getElementById('badgeRow');row.innerHTML='';
+  BADGES.forEach(b=>{
+    const earned=b.test(S);
+    const el=document.createElement('div');el.className='bdg'+(earned?' earned':'');
+    el.innerHTML=`<div class="ring">${b.icon}</div><small>${b.name}</small>`;
+    row.appendChild(el);
+  });
+}
+function completeQuest(qid,xp){
+  if(doneQ(S,qid))return;
+  S.quests[S.current][qid]=true;save();
+  const q=QUESTS.find(x=>x.id===qid);
+  award(q.xp,`${q.icon} +${q.xp} XP — ${q.title}`);
+  const before=BADGES.filter(b=>b.test(S)).map(b=>b.id);
+  renderBoard();renderBadges();renderGrid();
+}
+
+/* ---------------- MODAL ENGINE ---------------- */
+const scrim=document.getElementById('scrim');
+function modal(title,html){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML=html;scrim.classList.add('open');}
+function closeModal(){scrim.classList.remove('open');}
+document.getElementById('closeModal').onclick=closeModal;
+scrim.onclick=e=>{if(e.target===scrim)closeModal();};
+
+function openQuest(q){
+  const c=career(S.current);
+  if(q.action==='mentor')questMentor(c,q);
+  else if(q.action==='roi')questRoi(c,q);
+  else if(q.action==='paths')questPaths(c,q);
+  else if(q.action==='directory')questDirectory(c,q,'interview');
+  else if(q.action==='shadow')questDirectory(c,q,'shadow');
+  else if(q.action==='forage')questForage(c,q);
+  else if(q.action==='reflect')questReflect(c,q);
+  else if(q.action==='quiz')questQuiz(c,q);
+  else if(q.action==='verdict')questVerdict(c,q);
+}
+
+function questMentor(c,q){
+  const m=c.mentor;
+  modal('Meet '+m.name,
+    `<p class="muted">${m.role}</p>
+     <div class="qa"><div class="lab">In their words</div>“${m.quote}”</div>
+     <h4 style="margin:16px 0 4px">A typical day</h4>
+     <ul class="timeline">${m.day.map(d=>`<li>${d}</li>`).join('')}</ul>
+     <div class="qa"><div class="lab">Best part</div>${m.loved}</div>
+     <div class="qa"><div class="lab">Hardest part</div>${m.hard}</div>
+     <div class="qa"><div class="lab">Their advice to you</div>${m.advice}</div>
+     <p class="disclaimer">${m.name} is a representative profile built from real day-in-the-life accounts for this role. Quest "Book an Informational Interview" connects you to <em>real</em> people.</p>
+     <button class="btn" style="margin-top:8px" id="doneBtn">I read it — claim ${q.xp} XP</button>`);
+  document.getElementById('doneBtn').onclick=()=>{completeQuest(q.id);closeModal();};
+}
+
+function questPaths(c,q){
+  modal('Map the Path: '+c.name,
+    `<p class="muted">There is almost always more than one way in. Compare them — especially the ones with less debt.</p>
+     ${c.paths.map(p=>`<div class="qa"><b>${p.label}</b> &nbsp;<span class="pill">${p.years}</span> <span class="pill">${p.cost}</span><div style="margin-top:6px">${p.note}</div></div>`).join('')}
+     <div class="qa"><div class="lab">Skills that matter</div>${c.skills.join(' • ')}</div>
+     <button class="btn" style="margin-top:8px" id="doneBtn">Got it — claim ${q.xp} XP</button>`);
+  document.getElementById('doneBtn').onclick=()=>{completeQuest(q.id);closeModal();};
+}
+
+function questRoi(c,q){
+  modal('Run the Money Math',
+    `<p class="muted">Plug in real numbers for <b>${c.name}</b>. The default salary is its U.S. median (${c.median}).</p>
+     <div class="two">
+       <div><label class="fld">College cost per year ($)</label><input id="rCost" type="number" value="25000"></div>
+       <div><label class="fld">Years to finish</label><input id="rYears" type="number" value="4"></div>
+     </div>
+     <div class="two">
+       <div><label class="fld">% covered by scholarships/family</label><input id="rCover" type="number" value="30"></div>
+       <div><label class="fld">Expected starting salary ($)</label><input id="rSal" type="number" value="${(c.median||'').replace(/[^0-9]/g,'')||'60000'}"></div>
+     </div>
+     <label class="fld">Loan interest rate (%)</label><input id="rInt" type="number" value="6.5" step="0.1">
+     <button class="btn" style="margin-top:14px" id="calcBtn">Calculate ROI</button>
+     <div class="result" id="rOut"></div>
+     <p class="disclaimer">Simplified model for learning. Assumes a 10-year repayment, take-home ≈ 75% of salary, and compares against starting full-time work now at about $40,000/yr. Not financial advice.</p>`);
+  document.getElementById('calcBtn').onclick=()=>{
+    const cost=+document.getElementById('rCost').value||0;
+    const yrs=+document.getElementById('rYears').value||0;
+    const cover=Math.min(100,Math.max(0,+document.getElementById('rCover').value||0));
+    const sal=+document.getElementById('rSal').value||0;
+    const intr=(+document.getElementById('rInt').value||0)/100/12;
+    const total=cost*yrs;
+    const debt=Math.max(0,total*(1-cover/100));
+    const n=120;
+    const pmt=intr>0? debt*intr/(1-Math.pow(1+intr,-n)) : debt/n;
+    const takeHome=sal*0.75/12;
+    const pct=takeHome>0?(pmt/takeHome*100):0;
+    const alt=40000;
+    const premium=sal-alt;
+    const payback=premium>0?(debt/premium):null;
+    const tenYrNet=sal*10 - debt*(intr>0?(pmt*n/debt):1) ; // earnings minus total repaid (approx)
+    const totalRepaid=pmt*n;
+    let verdictClass='verdict-good',verdictTxt='Strong — the salary comfortably outweighs the debt.';
+    if(pct>20){verdictClass='verdict-warn';verdictTxt='Caution — loan payments would eat a big share of your take-home pay.';}
+    if(pct>33||premium<=0){verdictClass='verdict-bad';verdictTxt='Risky — this debt is heavy relative to the pay. Look hard at cheaper paths.';}
+    const out=document.getElementById('rOut');out.classList.add('show');
+    out.innerHTML=`
+      <div class="rrow"><span>Total cost of school</span><b>$${total.toLocaleString()}</b></div>
+      <div class="rrow"><span>Estimated debt (after aid)</span><b>$${Math.round(debt).toLocaleString()}</b></div>
+      <div class="rrow"><span>Loan payment (10-yr)</span><b>$${Math.round(pmt).toLocaleString()}/mo</b></div>
+      <div class="rrow"><span>Total repaid with interest</span><b>$${Math.round(totalRepaid).toLocaleString()}</b></div>
+      <div class="rrow"><span>Share of take-home pay</span><b>${pct.toFixed(0)}%</b></div>
+      <div class="rrow"><span>Years for the pay bump to repay the debt</span><b>${payback?payback.toFixed(1)+' yrs':'—'}</b></div>
+      <div style="margin-top:12px" class="${verdictClass}"><b>Verdict:</b> ${verdictTxt}</div>
+      <button class="btn" style="margin-top:14px" id="doneBtn">Claim ${q.xp} XP</button>`;
+    S.roiUsed=true;save();
+    document.getElementById('doneBtn').onclick=()=>{completeQuest(q.id);renderBadges();closeModal();};
+  };
+}
+
+const DIRECTORY=[
+  {emoji:"🧪",name:"Forage",desc:"Free virtual job simulations from real companies (JPMorgan, BCG, PwC...). The #1 way to actually try the work.",url:"https://www.theforage.com/"},
+  {emoji:"💬",name:"CareerVillage",desc:"Ask professionals about their jobs and get real answers, free.",url:"https://www.careervillage.org/"},
+  {emoji:"🎥",name:"VirtualJobShadow",desc:"Video-based career exploration and day-in-the-life job shadowing.",url:"https://www.virtualjobshadow.com/"},
+  {emoji:"🔗",name:"LinkedIn",desc:"Search your target job title + your city, then send a short, polite message asking for 15 minutes.",url:"https://www.linkedin.com/"},
+  {emoji:"🏛️",name:"Your school counselor & alumni",desc:"Counselors and alumni networks can connect you to people in almost any field — just ask.",url:""}
+];
+function scriptFor(c){return `Hi [Name],\n\nI'm a high school student exploring whether to pursue ${c.name.toLowerCase()}. I really admire your work and would love to ask a few questions about what the job is actually like day to day.\n\nWould you be open to a 15–20 minute call or chat sometime in the next couple of weeks? I'll work around your schedule, and I promise to keep it short.\n\nThank you so much,\n[Your name]`;}
+
+function questDirectory(c,q,mode){
+  const intro = mode==='shadow'
+    ? `Shadowing means observing a real professional at work for a few hours. Ask to watch a typical day — in person or over a video call.`
+    : `An informational interview is a short, low-pressure chat with someone who does the job. Most professionals say yes when a student asks politely.`;
+  modal(mode==='shadow'?'Shadow a Day':'Book an Informational Interview',
+    `<p class="muted">${intro}</p>
+     <h4>Where to find real people</h4>
+     ${DIRECTORY.map(d=>`<div class="dir-item"><div class="di-emoji">${d.emoji}</div><div><h4>${d.name}${d.url?` <a href="${d.url}" target="_blank" rel="noopener">open ↗</a>`:''}</h4><p>${d.desc}</p></div></div>`).join('')}
+     <h4 style="margin-top:18px">Copy-paste outreach script</h4>
+     <div class="scriptbox" id="scriptBox">${scriptFor(c)}</div>
+     <button class="btn secondary copy" id="copyBtn">Copy script</button>
+     <hr style="border-color:var(--line);margin:18px 0">
+     <p class="muted">When you've actually reached out to (or met with) a real person, claim your XP — on your honor.</p>
+     <button class="btn" id="doneBtn">I did this — claim ${q.xp} XP</button>`);
+  document.getElementById('copyBtn').onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(scriptFor(c));toast('Script copied');};
+  document.getElementById('doneBtn').onclick=()=>{completeQuest(q.id);closeModal();};
+}
+
+function questForage(c,q){
+  modal('Do a Forage Job Simulation',
+    `<p class="muted">Forage hosts free, self-paced simulations built by real companies. You do the actual tasks of the job in a few hours — the closest thing to test-driving a career.</p>
+     <div class="qa"><b>For ${c.name}:</b> ${c.forage}</div>
+     <a class="btn" href="https://www.theforage.com/simulations" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none">Browse Forage simulations ↗</a>
+     <hr style="border-color:var(--line);margin:18px 0">
+     <p class="muted">Finished one (or honestly started)? Claim your XP.</p>
+     <button class="btn" id="doneBtn">I completed a simulation — claim ${q.xp} XP</button>`);
+  document.getElementById('doneBtn').onclick=()=>{completeQuest(q.id);closeModal();};
+}
+
+function questReflect(c,q){
+  const prev=(S.reflections[S.current]||'');
+  modal('The 40-Year Question',
+    `<p class="muted">Imagine doing the day you just read about — most days — for 40 years. Be brutally honest.</p>
+     <label class="fld">Could you see yourself doing this long-term? Why or why not?</label>
+     <textarea id="refl" placeholder="Write at least a sentence or two...">${prev}</textarea>
+     <button class="btn" style="margin-top:12px" id="doneBtn">Save reflection — claim ${q.xp} XP</button>`);
+  document.getElementById('doneBtn').onclick=()=>{
+    const v=document.getElementById('refl').value.trim();
+    if(v.length<15){toast('Write a little more first 🙂');return;}
+    S.reflections[S.current]=v;save();completeQuest(q.id);closeModal();
+  };
+}
+
+const QUIZ=[
+  {q:"A degree costs $120,000 and you borrow all of it at about 6.5%. Roughly what's the monthly payment over 10 years?",
+   opts:["About $400/mo","About $1,360/mo","About $5,000/mo"],a:1},
+  {q:"Which path usually leaves you with the LEAST student debt?",
+   opts:["Private 4-year university","Out-of-state public university","A paid apprenticeship / skilled trade"],a:2},
+  {q:"True or false: a higher salary always means a better return on investment.",
+   opts:["True","False — you also have to weigh the cost and debt to earn it"],a:1}
+];
+function questQuiz(c,q){
+  let answered=0,correct=0;
+  const body=QUIZ.map((item,i)=>`<div class="qa" data-q="${i}"><b>${i+1}. ${item.q}</b>${item.opts.map((o,j)=>`<button class="opt" data-i="${i}" data-j="${j}">${o}</button>`).join('')}</div>`).join('');
+  modal('Cost vs Salary Quiz',`<p class="muted">Answer all three. Get 2 of 3 to pass.</p>${body}<div id="quizResult"></div>`);
+  document.querySelectorAll('.opt').forEach(btn=>{
+    btn.onclick=()=>{
+      const i=+btn.dataset.i,j=+btn.dataset.j;
+      const block=document.querySelector(`[data-q="${i}"]`);
+      if(block.dataset.locked)return;block.dataset.locked='1';answered++;
+      if(j===QUIZ[i].a){btn.classList.add('correct');correct++;}
+      else{btn.classList.add('wrong');block.querySelectorAll('.opt')[QUIZ[i].a].classList.add('correct');}
+      if(answered===QUIZ.length){
+        const pass=correct>=2;
+        document.getElementById('quizResult').innerHTML=
+          `<div class="qa ${pass?'verdict-good':'verdict-bad'}"><b>${correct}/3 correct.</b> ${pass?'Passed! You understand the money behind this path.':'Review the numbers and try again — claim XP once you pass.'}</div>`+
+          (pass?`<button class="btn" id="doneBtn">Claim ${q.xp} XP</button>`:`<button class="btn secondary" id="retryBtn">Retry</button>`);
+        if(pass)document.getElementById('doneBtn').onclick=()=>{completeQuest(q.id);closeModal();};
+        else document.getElementById('retryBtn').onclick=()=>questQuiz(c,q);
+      }
+    };
+  });
+}
+
+function questVerdict(c,q){
+  modal('Deliver Your Verdict: '+c.name,
+    `<p class="muted">Based on everything you learned, what's your call on ${c.name}?</p>
+     <button class="opt" data-v="Pursue">🟢 Pursue — this could be for me</button>
+     <button class="opt" data-v="Maybe">🟡 Maybe — I need to explore more</button>
+     <button class="opt" data-v="Pass">🔴 Pass — not the right fit</button>
+     <label class="fld">One sentence on why:</label>
+     <textarea id="vWhy" placeholder="The biggest reason is..."></textarea>
+     <button class="btn" style="margin-top:12px" id="doneBtn">Lock in verdict — claim ${q.xp} XP</button>`);
+  let choice=null;
+  document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{document.querySelectorAll('.opt').forEach(x=>x.classList.remove('correct'));b.classList.add('correct');choice=b.dataset.v;});
+  document.getElementById('doneBtn').onclick=()=>{
+    if(!choice){toast('Pick pursue, maybe, or pass first');return;}
+    S.verdicts[S.current]={choice,why:document.getElementById('vWhy').value.trim()};save();
+    completeQuest(q.id);closeModal();
+    toast(`Verdict locked: ${choice}`);
+  };
+}
+
+/* ---------------- NAV ---------------- */
+document.getElementById('backBtn').onclick=()=>{
+  document.getElementById('missionView').style.display='none';
+  document.getElementById('selectView').style.display='block';
+  renderGrid();window.scrollTo(0,0);
+};
+document.getElementById('resetBtn').onclick=()=>{
+  if(confirm('Reset all progress? This clears your XP, badges, and saved answers.')){
+    S=fresh();save();renderHud();renderGrid();
+    document.getElementById('missionView').style.display='none';
+    document.getElementById('selectView').style.display='block';
+  }
+};
+
+/* ---------------- BOOT ---------------- */
+renderGrid();renderHud();
+if(S.current && career(S.current)){openCareer(S.current);}
+</script>
+</body>
+</html>
