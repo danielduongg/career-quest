@@ -57,7 +57,7 @@ career-quest/
 
 ## The app at a glance
 
-- **8 career worlds** spanning tech, healthcare, engineering, business, design, and the skilled trades.
+- **32 career worlds** with built-in search and category filters, spanning tech, healthcare, engineering, business, design, public service, and the skilled trades.
 - **Quest board** in three tracks — 🔍 Recon, 🤝 Field Work, ⚖️ Reality Check — 9 quests per career.
 - **ROI calculator** that turns cost, aid, and salary into debt, monthly payments, and payback time.
 - **Simulated mentors** (day-in-the-life) **plus** a directory to meet *real* professionals.
