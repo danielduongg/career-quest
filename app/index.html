@@ -116,6 +116,16 @@
   section.block{margin:34px 0}
   section.block > h3.shead{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin:0 0 12px}
 
+  /* roadmap timeline */
+  .roadmap{list-style:none;padding:0;margin:6px 0 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 20px 4px}
+  .roadmap li{position:relative;padding:0 0 20px 44px}
+  .roadmap li::before{content:'';position:absolute;left:14px;top:8px;bottom:-2px;width:2px;background:var(--line)}
+  .roadmap li:last-child::before{display:none}
+  .roadmap li .rnum{position:absolute;left:0;top:-1px;width:30px;height:30px;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent2),var(--accent));color:#06121a;display:grid;place-items:center;font-weight:800;font-size:13px}
+  .roadmap li .rwhen{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--accent2);font-weight:700}
+  .roadmap li .rdo{font-size:14px;margin-top:2px;color:var(--ink)}
+
   /* modal */
   .scrim{position:fixed;inset:0;background:rgba(27,33,80,.45);backdrop-filter:blur(4px);
     display:none;align-items:center;justify-content:center;z-index:50;padding:18px}
@@ -221,6 +231,11 @@
         <div style="margin-top:10px"><a id="mBls" href="#" target="_blank" rel="noopener">Verify these numbers on BLS.gov ↗</a></div>
       </div>
     </div>
+
+    <section class="block" style="margin:22px 0 0">
+      <h3 class="shead">🧭 Your roadmap to this career</h3>
+      <ol class="roadmap" id="roadmapList"></ol>
+    </section>
 
     <div class="board">
       <div class="col recon">
@@ -524,6 +539,57 @@ const BADGES = [
 
 const LEVELS=["Rookie","Scout","Pathfinder","Investigator","Strategist","Future-Proofed"];
 
+/* ---------------- ROADMAPS ---------------- */
+const PHASES=["In high school","After high school","Build your skills","Get real experience","Land the job"];
+const ROADMAPS={
+"software-dev":["Crush math; take any CS class; build one small app or website.","Choose a route: a CS degree, a coding bootcamp, or disciplined self-study.","Learn one language deeply and ship 2–3 real projects to GitHub.","Land an internship or freelance gig; contribute to open source.","Polish your portfolio, apply widely, and practice coding interviews."],
+"registered-nurse":["Take biology and chemistry; volunteer or get a CNA job.","Enroll in a BSN (4 yr) or ADN (2 yr) nursing program.","Master clinical skills and pass your nursing courses and labs.","Complete supervised clinical rotations in hospitals during school.","Pass the NCLEX-RN exam and earn your state license."],
+"electrician":["Take shop, math, and physics; find summer helper or labor work.","Apply to a paid apprenticeship (IBEW or a local contractor).","Attend trade classes and learn the National Electrical Code.","Log 8,000+ supervised hours working under a journeyman.","Pass the licensing exam to become a journeyman electrician."],
+"mechanical-engineer":["Excel in calculus and physics; join a robotics or maker club.","Start a B.S. in Mechanical Engineering at an accredited school.","Master CAD, thermodynamics, and the core engineering courses.","Do co-ops or internships every summer you can.","Graduate, pass the FE exam, and apply for engineering roles."],
+"ux-designer":["Take art/design classes; redesign an app you dislike for fun.","Choose a route: a design degree or a UX bootcamp/certificate.","Learn Figma and user research; build three case studies.","Do a design internship or freelance for a real client.","Apply with a strong portfolio — it matters more than the degree."],
+"physician":["Ace biology and chemistry; volunteer at a hospital and shadow a doctor.","Finish a bachelor's with pre-med courses; score well on the MCAT.","Complete four years of medical school (MD or DO).","Match into a 3–7 year residency in your chosen specialty.","Pass your board exams and get licensed to practice."],
+"welder":["Take a welding or metal-shop class; practice safe technique.","Enroll in a short welding certificate program or apprenticeship.","Master MIG, TIG, and stick welding, and learn to read blueprints.","Earn AWS certifications; practice pipe or structural welding.","Get hired — specialize (pipe, underwater) to boost your pay."],
+"accountant":["Take math and any business class; get comfortable in Excel.","Start a B.S. in Accounting at a four-year school.","Master financial accounting, tax, and audit coursework.","Do a Forage sim and a summer internship at a firm.","Graduate, pass the CPA exam, and join a firm or company."],
+"data-scientist":["Build strong math and stats; learn to code in Python.","Pursue a degree in stats, CS, or math (or a serious bootcamp).","Master statistics, SQL, and machine-learning basics.","Analyze real datasets and publish projects to a portfolio.","Apply for analyst/data roles; many add a master's to stand out."],
+"infosec-analyst":["Tinker with computers and networks; learn security basics.","Get an IT or cybersecurity degree, or start in IT support.","Earn certifications like Security+ and practice on TryHackMe.","Work a help-desk or junior security role to gain experience.","Move into a security analyst role and keep certifying."],
+"it-support":["Build, fix, and tinker with PCs; help friends and family.","Study for the CompTIA A+ certification (no degree required).","Learn operating systems, networking, and troubleshooting.","Land a help-desk or junior IT role to build a track record.","Get hired full-time; use it as a launchpad into security or dev."],
+"dental-hygienist":["Take biology and chemistry; shadow a hygienist at a clinic.","Enroll in an accredited dental-hygiene associate program (2–3 yr).","Master cleaning, X-rays, and patient-care coursework.","Complete supervised clinical hours during the program.","Pass national and state board exams to get licensed."],
+"physical-therapist":["Take biology and anatomy; volunteer in a PT clinic.","Earn a bachelor's with the prerequisite science courses.","Complete a 3-year Doctor of Physical Therapy (DPT) program.","Do supervised clinical rotations with real patients.","Pass the national licensure exam (NPTE) to practice."],
+"pharmacist":["Excel in chemistry and biology; work or shadow at a pharmacy.","Finish pre-pharmacy courses (2–4 yr) and apply to PharmD school.","Complete a four-year Doctor of Pharmacy (PharmD) program.","Do pharmacy rotations in retail and hospital settings.","Pass the NAPLEX licensing exam and get hired."],
+"paramedic":["Take biology; get CPR-certified; look into a cadet/Explorer post.","Complete an EMT certificate (a few months).","Gain field experience as an EMT, then train as a paramedic.","Finish paramedic school and your clinical ride-along hours.","Pass the NREMT exam and get hired by an EMS agency."],
+"veterinarian":["Ace science classes; volunteer at a shelter or animal clinic.","Earn a bachelor's with pre-vet science courses.","Get into and complete four years of veterinary school (DVM).","Do clinical rotations and internships working with animals.","Pass the licensing exam (NAVLE) and start practicing."],
+"plumber":["Take shop and math; find a helper job with a plumber.","Apply to a paid plumbing apprenticeship (4–5 yr).","Attend trade classes; learn codes, fixtures, and pipefitting.","Log supervised on-the-job hours under a master plumber.","Pass the licensing exam to become a journeyman plumber."],
+"hvac-tech":["Take shop, math, and physics; tinker with mechanical things.","Enroll in a short HVAC trade program (6 mo–2 yr).","Learn refrigeration, electrical, and airflow systems.","Apprentice with a company and earn EPA certification.","Get hired as an HVAC technician; specialize to earn more."],
+"carpenter":["Take wood shop and math; build small projects at home.","Join a paid carpentry apprenticeship (3–4 yr).","Learn framing, finishing, blueprints, and tool safety.","Work supervised hours on real job sites.","Become a journeyman; specialize (finish, framing) for higher pay."],
+"auto-tech":["Take auto shop; fix bikes, cars, and small engines for practice.","Enroll in a trade-school auto program (6 mo–2 yr).","Learn diagnostics, engines, brakes, and electrical systems.","Apprentice at a shop or dealership; earn ASE certifications.","Get hired; specialize in EVs/hybrids for the best pay."],
+"financial-analyst":["Take math and economics; learn Excel and follow the markets.","Earn a B.S. in finance, economics, or accounting.","Master financial modeling, accounting, and valuation.","Do a Forage finance sim and a summer internship.","Graduate, apply for analyst roles, and pursue the CFA to advance."],
+"marketing-manager":["Run a social account or blog; take any business/media class.","Earn a bachelor's in marketing, communications, or business.","Learn analytics, content, SEO, and brand strategy.","Intern, then start as a coordinator or specialist.","Deliver results and get promoted into management."],
+"project-manager":["Lead a club, team, or event to practice organizing people.","Earn a bachelor's in business or your industry of interest.","Learn planning tools, budgeting, and Agile basics.","Start in a coordinator role and own small projects.","Earn the PMP certification and step into PM roles."],
+"civil-engineer":["Excel in math and physics; join a build or robotics club.","Start a B.S. in Civil Engineering (ABET-accredited).","Master structures, materials, and design coursework.","Do internships with firms or public agencies.","Graduate, pass the FE exam, then earn your PE license."],
+"electrical-engineer":["Crush calculus and physics; build with Arduino kits.","Start a B.S. in Electrical Engineering.","Master circuits, signals, and electromagnetics.","Do co-ops or internships in industry.","Graduate, pass the FE exam, and apply for EE roles."],
+"architect":["Take art, drafting, and math; build a sketch/model portfolio.","Enroll in an accredited architecture degree (B.Arch or M.Arch).","Master design studios, building codes, and CAD/BIM tools.","Complete paid internship hours (AXP) at a firm.","Pass the ARE exams to become a licensed architect."],
+"teacher":["Tutor classmates; volunteer or assist in a classroom.","Earn a bachelor's in your subject or in education.","Complete a teacher-prep program and student teaching.","Student-teach in a real classroom under a mentor.","Pass your state's exams and earn your teaching license."],
+"police-officer":["Stay fit and out of trouble; join a Police Explorer program.","Meet department requirements (HS diploma; some need college).","Apply and pass the written, physical, and background checks.","Complete the police academy (4–7 months).","Get sworn in and start as a patrol officer with field training."],
+"firefighter":["Stay very fit; volunteer with a fire department if you can.","Get EMT-certified and take fire-science courses.","Complete a fire academy and physical-ability training.","Volunteer or intern to build hands-on experience.","Pass testing and get hired by a fire department."],
+"lawyer":["Join debate; sharpen reading and writing; keep grades high.","Earn any bachelor's degree, then score well on the LSAT.","Complete three years of law school (earn your JD).","Intern at law firms or clerk during school.","Pass the bar exam in your state and get licensed."],
+"graphic-designer":["Take art classes; learn Photoshop/Illustrator; design for fun.","Choose a route: a design degree or self-taught + portfolio.","Master typography, color, and tools like Adobe and Figma.","Freelance or intern to get real client work.","Apply with a strong portfolio — that's what gets you hired."],
+"chef":["Cook constantly; get any kitchen job, even dishwashing.","Decide: work up through kitchens or attend culinary school.","Learn knife skills, stations, food safety, and speed.","Work the line and move up: prep, line cook, sous chef.","Earn a head-chef role by proving leadership and consistency."]
+};
+function roadmapFor(c){
+  if(ROADMAPS[c.id])return ROADMAPS[c.id];
+  const p=(c.paths||[]).map(x=>x.label+" ("+x.years+")");
+  return ["Explore this field using the quests below.",(p[0]||"Choose your education or training path."),"Build the core skills: "+((c.skills||[]).slice(0,2).join(", ")||"the fundamentals")+".","Get experience via a Forage simulation, internship, or job shadow.","Apply, interview, and land your first role."];
+}
+function renderRoadmap(c){
+  const ol=document.getElementById('roadmapList');if(!ol)return;
+  const steps=roadmapFor(c);ol.innerHTML='';
+  steps.forEach((s,i)=>{
+    const li=document.createElement('li');
+    li.innerHTML='<span class="rnum">'+(i+1)+'</span><div class="rwhen">'+(PHASES[i]||('Step '+(i+1)))+'</div><div class="rdo">'+s+'</div>';
+    ol.appendChild(li);
+  });
+}
+
 /* ---------------- STATE ---------------- */
 const KEY="careerquest_v1";
 let S=load();
@@ -611,7 +677,7 @@ function openCareer(id){
   document.getElementById('mBls').href=c.bls;
   document.getElementById('selectView').style.display='none';
   document.getElementById('missionView').style.display='block';
-  renderBoard();renderBadges();renderHud();
+  renderRoadmap(c);renderBoard();renderBadges();renderHud();
   window.scrollTo(0,0);
 }
 function renderBoard(){
