@@ -1,0 +1,263 @@
+{
+  "_meta": {
+    "note": "Salary figures are illustrative U.S. national medians drawn from the Bureau of Labor Statistics Occupational Outlook Handbook (May 2024 reference year). They are starting points for conversation, NOT guarantees. Always click the BLS link to verify current national and local numbers before making decisions.",
+    "source": "https://www.bls.gov/ooh/",
+    "lastReviewed": "2026-06"
+  },
+  "careers": [
+    {
+      "id": "software-dev",
+      "name": "Software Developer",
+      "emoji": "💻",
+      "cluster": "Technology",
+      "median": "$133,080",
+      "range": "$74k – $208k+",
+      "outlook": "Much faster than average growth",
+      "blsUrl": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
+      "paths": [
+        { "label": "Bachelor's in Computer Science", "years": "4 yrs", "cost": "$48k–$190k", "note": "Traditional route. Internships matter more than GPA." },
+        { "label": "Coding bootcamp", "years": "3–9 mo", "cost": "$0–$20k", "note": "Faster, cheaper, but you must build a portfolio and grind." },
+        { "label": "Self-taught + projects", "years": "varies", "cost": "~$0", "note": "Hardest path to a first job, but real for the disciplined." }
+      ],
+      "skills": ["Problem solving", "Logic", "Patience for debugging", "Communication"],
+      "forage": "Try the JPMorgan Software Engineering or Wells Fargo simulations on Forage (free).",
+      "mentor": {
+        "name": "Priya R.",
+        "role": "Backend Developer, 6 yrs in",
+        "quote": "Nobody tells you 70% of the job is reading other people's code and sitting in meetings.",
+        "dayInLife": [
+          "9:00 — Stand-up meeting, say what I'm working on (2 min).",
+          "9:30 — Code. Mostly fixing a bug a customer reported.",
+          "12:30 — Lunch, usually at my desk reading docs.",
+          "1:30 — Code review: I read a teammate's work and leave comments.",
+          "4:00 — Meeting about next month's features.",
+          "5:30 — Wrap up, push my code, log off."
+        ],
+        "lovedIt": "Building something and watching thousands of people use it the next day.",
+        "hardPart": "Imposter syndrome is real. Tech changes constantly — you never stop learning.",
+        "advice": "Build one tiny app this month. You'll learn more than a semester of theory."
+      }
+    },
+    {
+      "id": "registered-nurse",
+      "name": "Registered Nurse",
+      "emoji": "🩺",
+      "cluster": "Healthcare",
+      "median": "$93,600",
+      "range": "$66k – $135k",
+      "outlook": "Faster than average growth",
+      "blsUrl": "https://www.bls.gov/ooh/healthcare/registered-nurses.htm",
+      "paths": [
+        { "label": "BSN (Bachelor of Science in Nursing)", "years": "4 yrs", "cost": "$40k–$120k", "note": "Preferred by hospitals; opens more doors." },
+        { "label": "ADN (Associate Degree in Nursing)", "years": "2 yrs", "cost": "$6k–$40k", "note": "Faster and cheaper way in; many bridge to BSN later while working." }
+      ],
+      "skills": ["Empathy", "Staying calm under pressure", "Attention to detail", "Stamina"],
+      "forage": "Search Forage for healthcare and life-sciences experiences.",
+      "mentor": {
+        "name": "Marcus T.",
+        "role": "ER Nurse, 8 yrs in",
+        "quote": "It is physically and emotionally hard, and also the most meaningful work I can imagine.",
+        "dayInLife": [
+          "6:45 — Get report from the night shift on my patients.",
+          "7:30 — Med pass, check vitals, chart everything.",
+          "10:00 — A trauma comes in. Everything else waits.",
+          "1:00 — Eat half a sandwich standing up.",
+          "3:00 — Discharge a patient, admit a new one.",
+          "7:15 — Hand off to the next shift. 12-hour day done."
+        ],
+        "lovedIt": "A patient hugged me and said I made the scariest day of their life bearable.",
+        "hardPart": "12-hour shifts on your feet, nights and weekends, and you see people on their worst days.",
+        "advice": "Volunteer or get a CNA job in high school. You'll know within a month if it's for you."
+      }
+    },
+    {
+      "id": "electrician",
+      "name": "Electrician",
+      "emoji": "⚡",
+      "cluster": "Skilled Trades",
+      "median": "$61,590",
+      "range": "$39k – $104k",
+      "outlook": "Faster than average growth",
+      "blsUrl": "https://www.bls.gov/ooh/construction-and-extraction/electricians.htm",
+      "paths": [
+        { "label": "Paid apprenticeship", "years": "4–5 yrs", "cost": "Earn while you learn (≈ $0 debt)", "note": "You get PAID to train. No degree required. This is the headline." },
+        { "label": "Trade school + apprenticeship", "years": "1 yr + apprenticeship", "cost": "$5k–$15k", "note": "Short program first, then apprentice hours." }
+      ],
+      "skills": ["Working with your hands", "Math", "Safety focus", "Spatial reasoning"],
+      "forage": "Trades aren't on Forage — book a real job-shadow with a local contractor instead.",
+      "mentor": {
+        "name": "Dee W.",
+        "role": "Journeyman Electrician, 11 yrs in",
+        "quote": "I have zero student debt and own a house. My friends with degrees are still paying theirs off.",
+        "dayInLife": [
+          "6:30 — Load the van, drive to the job site.",
+          "7:00 — Pull wire and set boxes for a new building.",
+          "10:00 — Troubleshoot a circuit that won't pass inspection.",
+          "12:00 — Lunch from the cooler with the crew.",
+          "1:00 — Run conduit, label the panel.",
+          "3:30 — Clean up, plan tomorrow, head home."
+        ],
+        "lovedIt": "I can point at buildings and say 'I wired that.' And the pay is solid with no debt.",
+        "hardPart": "Hot attics, cold crawlspaces, early mornings. Your body is your tool — protect it.",
+        "advice": "Call three local electrical contractors and ask to shadow for a day. Most say yes."
+      }
+    },
+    {
+      "id": "mechanical-engineer",
+      "name": "Mechanical Engineer",
+      "emoji": "⚙️",
+      "cluster": "Engineering",
+      "median": "$99,510",
+      "range": "$64k – $157k",
+      "outlook": "Faster than average growth",
+      "blsUrl": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
+      "paths": [
+        { "label": "Bachelor's in Mechanical Engineering", "years": "4 yrs", "cost": "$48k–$190k", "note": "Required. It's a heavy math and physics load — be honest about that." }
+      ],
+      "skills": ["Math & physics", "CAD software", "Curiosity about how things work", "Teamwork"],
+      "forage": "Try engineering simulations on Forage from companies like GE or Lockheed.",
+      "mentor": {
+        "name": "Sofia L.",
+        "role": "Mechanical Engineer (HVAC), 5 yrs in",
+        "quote": "Real engineering is 80% spreadsheets and emails, 20% the cool design stuff from class.",
+        "dayInLife": [
+          "8:30 — Check email, review a contractor's questions.",
+          "9:30 — Design work in CAD, size equipment for a building.",
+          "11:30 — Site visit to check an install.",
+          "1:30 — Calculations and a report.",
+          "3:30 — Team meeting on project schedule.",
+          "5:00 — Wrap up the report, log off."
+        ],
+        "lovedIt": "I designed a system that keeps a whole hospital comfortable. That's real impact.",
+        "hardPart": "The degree is genuinely hard. Many start engineering and switch out freshman year.",
+        "advice": "If calculus excites you more than it scares you, this could be your path."
+      }
+    },
+    {
+      "id": "ux-designer",
+      "name": "UX / Web Designer",
+      "emoji": "🎨",
+      "cluster": "Design + Tech",
+      "median": "$98,540",
+      "range": "$45k – $150k",
+      "outlook": "Faster than average growth",
+      "blsUrl": "https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm",
+      "paths": [
+        { "label": "Bachelor's (design, HCI, or related)", "years": "4 yrs", "cost": "$48k–$190k", "note": "Helps, but a strong portfolio beats a degree here." },
+        { "label": "Bootcamp / certificate + portfolio", "years": "3–12 mo", "cost": "$0–$15k", "note": "Very viable. Employers hire on portfolio, not diploma." }
+      ],
+      "skills": ["Visual taste", "Empathy for users", "Figma", "Communicating ideas"],
+      "forage": "Search Forage for design and product experiences.",
+      "mentor": {
+        "name": "Jordan K.",
+        "role": "Product Designer, 7 yrs in",
+        "quote": "Your portfolio is your degree. I've hired people with no college and turned down people with master's.",
+        "dayInLife": [
+          "9:00 — Review user feedback on a feature.",
+          "10:00 — Sketch and design screens in Figma.",
+          "12:00 — Present designs to engineers and product managers.",
+          "1:30 — Revise based on feedback.",
+          "3:00 — User-testing call, watch someone use the product.",
+          "4:30 — Document decisions, hand off to engineering."
+        ],
+        "lovedIt": "Watching a confused user suddenly 'get it' because of something I designed.",
+        "hardPart": "Everyone has an opinion on design, so you defend your choices constantly.",
+        "advice": "Redesign an app you hate. Put it online. That's the start of a portfolio."
+      }
+    },
+    {
+      "id": "physician",
+      "name": "Physician",
+      "emoji": "👩‍⚕️",
+      "cluster": "Healthcare",
+      "median": "$239,200+",
+      "range": "$170k – $400k+",
+      "outlook": "Faster than average growth",
+      "blsUrl": "https://www.bls.gov/ooh/healthcare/physicians-and-surgeons.htm",
+      "paths": [
+        { "label": "Bachelor's → Med School → Residency", "years": "11–15 yrs", "cost": "$200k–$400k+ debt common", "note": "Long, expensive, intense. The pay is high but it comes much later." }
+      ],
+      "skills": ["Top-tier discipline", "Science aptitude", "Emotional resilience", "Delayed gratification"],
+      "forage": "Shadow a doctor and volunteer in a hospital before committing to this path.",
+      "mentor": {
+        "name": "Dr. Amir H.",
+        "role": "Family Medicine, attending (started med school at 22, finished training at 29)",
+        "quote": "I love it now, but I gave up my whole 20s and finished training with $280k in debt.",
+        "dayInLife": [
+          "7:30 — Review the day's patient charts.",
+          "8:00 — See patients, every 15–20 minutes.",
+          "12:00 — Quick lunch while finishing notes.",
+          "1:00 — More patients, plus phone calls and refills.",
+          "5:00 — Charting that didn't get done during the day.",
+          "6:30 — Finally home."
+        ],
+        "lovedIt": "I've delivered babies and caught cancers early. The trust patients give you is sacred.",
+        "hardPart": "The path is 11+ years and huge debt. Burnout is common. Be sure before you start.",
+        "advice": "Shadow a doctor for a week. Volunteer in an ER. Make sure you love the reality, not the TV version."
+      }
+    },
+    {
+      "id": "welder",
+      "name": "Welder",
+      "emoji": "🔥",
+      "cluster": "Skilled Trades",
+      "median": "$50,460",
+      "range": "$37k – $72k+",
+      "outlook": "Average growth (high demand for skilled welders)",
+      "blsUrl": "https://www.bls.gov/ooh/production/welders-cutters-solderers-and-brazers.htm",
+      "paths": [
+        { "label": "Trade school / certificate", "years": "6–18 mo", "cost": "$5k–$15k", "note": "Short and cheap. Specialized welders (pipe, underwater) earn far more." },
+        { "label": "Apprenticeship", "years": "varies", "cost": "Earn while learning", "note": "On-the-job training, little to no debt." }
+      ],
+      "skills": ["Steady hands", "Focus", "Comfort with heat/sparks", "Reading blueprints"],
+      "forage": "Not on Forage — visit a welding school open house or shadow a fabrication shop.",
+      "mentor": {
+        "name": "Ray P.",
+        "role": "Pipe Welder, 9 yrs in",
+        "quote": "Certified pipe and underwater welders can clear six figures. The ceiling is higher than people think.",
+        "dayInLife": [
+          "6:00 — Gear up, review the day's blueprints.",
+          "6:30 — Set up the rig and start laying beads.",
+          "10:00 — Inspector checks my welds with X-ray.",
+          "12:00 — Lunch with the crew.",
+          "12:45 — Back to welding, different position.",
+          "3:30 — Clean station, log work, head out."
+        ],
+        "lovedIt": "Specialty welding pays incredibly well and I'm never bored. Every job is different.",
+        "hardPart": "Sparks, heat, and you must protect your eyes and lungs. Travel can be heavy.",
+        "advice": "Take a welding class at a community college. You'll know fast if you have the hands for it."
+      }
+    },
+    {
+      "id": "accountant",
+      "name": "Accountant",
+      "emoji": "📊",
+      "cluster": "Business",
+      "median": "$81,680",
+      "range": "$50k – $138k",
+      "outlook": "Average growth",
+      "blsUrl": "https://www.bls.gov/ooh/business-and-financial/accountants-and-auditors.htm",
+      "paths": [
+        { "label": "Bachelor's in Accounting + CPA", "years": "4 yrs + exam", "cost": "$48k–$190k", "note": "CPA license boosts pay and options significantly." }
+      ],
+      "skills": ["Comfort with numbers", "Organization", "Ethics", "Attention to detail"],
+      "forage": "Try the PwC, KPMG, or Deloitte audit/tax simulations on Forage (free).",
+      "mentor": {
+        "name": "Hannah B.",
+        "role": "Staff Accountant at a firm, 4 yrs in",
+        "quote": "Stable, well-paid, and in demand everywhere — but 'busy season' means 60-hour weeks.",
+        "dayInLife": [
+          "8:30 — Coffee, review client emails.",
+          "9:00 — Reconcile accounts, check the numbers.",
+          "11:00 — Call with a client about their books.",
+          "12:30 — Lunch out (a real break, except in busy season).",
+          "1:30 — Prepare financial statements.",
+          "5:00 — Done — except Jan–April, when it's 7pm+."
+        ],
+        "lovedIt": "Every business needs this, so I have huge job security and can work anywhere.",
+        "hardPart": "Busy season is brutal. And it's detail work — small errors matter a lot.",
+        "advice": "Do a Forage accounting simulation this weekend. It mirrors the real entry-level work."
+      }
+    }
+  ]
+}
