@@ -181,42 +181,60 @@
       <div class="price">
         <h3>Explorer</h3>
         <div class="amt">Free</div>
+        <div class="wasprice">The app, forever free</div>
         <ul>
           <li>The full gamified web app</li>
           <li>32 career worlds + search</li>
+          <li>Step-by-step career roadmaps</li>
           <li>ROI calculator</li>
-          <li>Real-mentor directory + scripts</li>
-          <li>Progress saving &amp; badges</li>
+          <li>Mentor directory + outreach scripts</li>
         </ul>
         <a class="btn ghost" href="app/">Start free</a>
       </div>
       <div class="price featured">
         <h3>Family</h3>
-        <div class="amt">$149 <small>one-time</small></div>
+        <div class="amt"><span data-price="family">$49</span> <small>one-time</small></div>
+        <div class="wasprice">The complete printable toolkit — instant download</div>
         <ul>
-          <li>Everything in Explorer</li>
-          <li>Full 8-module guided curriculum</li>
-          <li>Printable workbook + parent guide</li>
-          <li>New career worlds added regularly</li>
-          <li>Completion certificate</li>
+          <li>Everything in Explorer (the free app)</li>
+          <li><b>The Complete Workbook</b> — 22-page printable PDF (8 modules + worksheets + scripts)</li>
+          <li><b>32-Career Roadmaps</b> booklet (PDF)</li>
+          <li>Printable <b>completion certificate</b></li>
+          <li>Parent &amp; facilitator guide</li>
           <li>Lifetime updates</li>
         </ul>
-        <a class="btn" href="#waitlist">Get the family plan</a>
+        <button class="btn" data-buy="family">Get instant access</button>
+        <div class="guarantee">🔒 Instant download · 30-day money-back guarantee</div>
       </div>
       <div class="price">
         <h3>Classroom</h3>
         <div class="amt">Custom</div>
+        <div class="wasprice">For schools &amp; districts</div>
         <ul>
           <li>Everything in Family</li>
           <li>Per-seat pricing for schools</li>
           <li>Counselor dashboard</li>
           <li>Live group mentor sessions</li>
-          <li>PD &amp; onboarding for staff</li>
+          <li>Staff onboarding &amp; PD</li>
         </ul>
-        <a class="btn ghost" href="#waitlist">Talk to us</a>
+        <a class="btn ghost" data-buy="classroom" href="#lead">Talk to us</a>
       </div>
     </div>
-    <p class="micro" style="text-align:center;margin-top:18px">Suggested pricing — fully editable in the source. This is a starter storefront, not a payment processor.</p>
+    <p class="micro" style="text-align:center;margin-top:18px">Secure checkout through your store. Links &amp; price live in one config block — see <a href="https://github.com/danielduongg/career-quest/blob/main/MONETIZE.md">MONETIZE.md</a> to go live in minutes.</p>
+  </div>
+</section>
+
+<section id="lead">
+  <div class="wrap">
+    <div class="leadbox">
+      <h2 class="sec" style="margin-bottom:6px">Not ready to buy? Start free.</h2>
+      <p class="lead" style="margin-bottom:20px">Grab the free 1-page "Don't Waste 4 Years" decision checklist — and get new career roadmaps and tips as they drop.</p>
+      <form id="leadForm" class="leadform">
+        <input type="email" name="email" required placeholder="you@email.com" aria-label="Your email" />
+        <button class="btn" type="submit">Send me the checklist</button>
+      </form>
+      <p class="micro"><a href="CareerQuest-Free-Checklist.pdf" target="_blank" rel="noopener">Or download the free checklist now →</a> &nbsp;·&nbsp; No spam. Unsubscribe anytime.</p>
+    </div>
   </div>
 </section>
 
@@ -228,6 +246,8 @@
     <details><summary>Are the salary numbers reliable?</summary><p>They're national medians from the U.S. Bureau of Labor Statistics, and every career links straight to the BLS source so you can verify current local figures. They're starting points for conversation, not guarantees.</p></details>
     <details><summary>Is this anti-college?</summary><p>Not at all. Research shows a bachelor's degree pays off handsomely for most people. The point is to choose a path on purpose — degree, trade, or apprenticeship — instead of defaulting into debt and discovering the fit later.</p></details>
     <details><summary>How long does it take?</summary><p>The core game runs about 2–4 hours per career. The full guided curriculum is designed for a semester elective or a self-paced summer project.</p></details>
+    <details><summary>What exactly do I get with the Family plan, and how?</summary><p>Instantly, as downloadable PDFs: the 22-page Complete Workbook (all 8 modules + worksheets + outreach scripts), the 32-Career Roadmaps booklet, a printable completion certificate, and the parent &amp; facilitator guide. The free app stays free forever.</p></details>
+    <details><summary>What's your refund policy?</summary><p>A 30-day, no-questions-asked money-back guarantee. If the toolkit doesn't help your teen think more clearly about their future, email for a full refund.</p></details>
   </div>
 </section>
 
@@ -257,5 +277,57 @@
   </div>
 </footer>
 
+<style>
+  .wasprice{color:var(--muted);font-size:12.5px;margin:-4px 0 12px}
+  .guarantee{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
+  .price .btn{border:none}
+  #lead{padding:54px 0}
+  .leadbox{max-width:640px;margin:0 auto;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:38px 28px;box-shadow:var(--shadow)}
+  .leadform{display:flex;gap:10px;max-width:470px;margin:0 auto 12px;flex-wrap:wrap}
+  .leadform input{flex:1;min-width:200px;background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:13px 16px;font-size:15px;font-family:inherit}
+  .leadform input:focus{outline:none;border-color:var(--accent2);box-shadow:0 0 0 3px rgba(91,108,245,.16)}
+  .cq-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(140px);background:var(--ink);color:#fff;padding:13px 22px;border-radius:14px;font-size:14px;font-weight:600;box-shadow:var(--shadow);transition:.35s;z-index:90;max-width:88%;text-align:center;line-height:1.4}
+  .cq-toast.show{transform:translateX(-50%) translateY(0)}
+</style>
+
+<script>
+  /* ============================================================
+     CAREERQUEST STORE CONFIG  —  edit these to go live.
+     Full step-by-step setup: MONETIZE.md
+     ============================================================ */
+  window.CAREERQUEST_CONFIG = {
+    familyCheckoutUrl: "",   /* paste your Gumroad or Stripe payment link for the $49 Family plan */
+    familyPrice:       "$49",
+    classroomContact:  "mailto:hello@example.com?subject=CareerQuest%20for%20our%20school",
+    emailFormEndpoint: ""    /* paste your Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz */
+  };
+  /* ============================================================ */
+
+  (function(){
+    var C = window.CAREERQUEST_CONFIG || {};
+    function toast(msg){
+      var t=document.createElement('div');t.className='cq-toast';t.textContent=msg;
+      document.body.appendChild(t);
+      requestAnimationFrame(function(){t.classList.add('show');});
+      setTimeout(function(){t.classList.remove('show');setTimeout(function(){t.remove();},400);},4600);
+    }
+    document.querySelectorAll('[data-price="family"]').forEach(function(el){ if(C.familyPrice) el.textContent=C.familyPrice; });
+    document.querySelectorAll('[data-buy="family"]').forEach(function(b){
+      b.addEventListener('click',function(e){
+        e.preventDefault();
+        if(C.familyCheckoutUrl){ window.open(C.familyCheckoutUrl,'_blank','noopener'); }
+        else { var l=document.getElementById('lead'); if(l) l.scrollIntoView({behavior:'smooth'});
+          toast('Checkout goes live the moment you paste your store link — see MONETIZE.md. The free list is open below.'); }
+      });
+    });
+    document.querySelectorAll('[data-buy="classroom"]').forEach(function(b){ if(C.classroomContact) b.setAttribute('href',C.classroomContact); });
+    var form=document.getElementById('leadForm');
+    if(form){
+      if(C.emailFormEndpoint){ form.setAttribute('action',C.emailFormEndpoint); form.setAttribute('method','POST'); }
+      else { form.addEventListener('submit',function(e){ e.preventDefault();
+        toast('Email capture turns on once you add a Formspree endpoint (MONETIZE.md). The free checklist link already works.'); }); }
+    }
+  })();
+</script>
 </body>
 </html>

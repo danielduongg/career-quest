@@ -41,9 +41,12 @@ The app's mentor directory links out to those real platforms, so CareerQuest com
 
 ```
 career-quest/
-├── index.html              # Landing / sales page (parents + students, pricing, FAQ)
+├── index.html              # Landing / sales page — pricing, value stack, checkout, email capture
+├── success.html            # Post-purchase thank-you page (your checkout redirects here)
+├── MONETIZE.md             # Step-by-step: turn on payments + an email list in minutes
+├── CareerQuest-Free-Checklist.pdf   # Free lead magnet (the only PDF in this public repo)
 ├── app/
-│   └── index.html          # The gamified web app (quest board, ROI calc, mentors) — self-contained
+│   └── index.html          # The gamified web app (quest board, ROI calc, roadmaps, mentors)
 ├── curriculum/
 │   ├── index.html          # Browsable curriculum hub
 │   ├── facilitator-guide.md
@@ -51,8 +54,11 @@ career-quest/
 │   ├── mentor-outreach-scripts.md
 │   └── worksheets/         # Career Scout Sheet, ROI Worksheet, Decision Matrix
 ├── data/
-│   └── careers.json        # The career dataset (salaries, paths, mentors) with sources
+│   └── careers.json        # Career dataset (salaries, paths, mentors, roadmaps) with sources
 └── README.md
+#
+# The PAID product (Complete Workbook, Roadmaps booklet, Certificate PDFs) is delivered
+# to you separately and is deliberately NOT in this public repo — those are what you sell.
 ```
 
 ## The app at a glance
@@ -87,9 +93,17 @@ npx serve .
 
 The landing page is the root `index.html`; the app lives at `/app/`; the curriculum at `/curriculum/`.
 
-## Selling it
+## Make money with it
 
-The landing page ships with three suggested tiers — **Explorer (free)**, **Family ($149 one-time)**, and **Classroom (custom)** — all editable in `index.html`. The free app is the funnel; the paid plans add the full guided curriculum, workbooks, more careers, and (for schools) a counselor dashboard and live mentor sessions. CareerQuest is a starter storefront, not a payment processor — wire up your own checkout (Stripe, Gumroad, etc.) on the call-to-action buttons.
+This is a complete, ready-to-sell funnel — no backend required:
+
+- **Free** — the gamified app, a downloadable [decision checklist](CareerQuest-Free-Checklist.pdf) (lead magnet), and an email-capture form.
+- **Family — $49 one-time** — the printable bundle people buy: the 22-page Complete Workbook, the 32-Career Roadmaps booklet, a completion certificate, and the parent guide (delivered as PDFs).
+- **Classroom — custom** — a contact link for schools and districts.
+
+Going live takes about 15 minutes: create a product on **Gumroad** (or a Stripe Payment Link), upload the paid PDFs, and paste your link into the one **config block at the bottom of `index.html`**. The buy button, price, classroom contact, and email list are all wired to that block. Full instructions — plus the post-purchase thank-you page (`success.html`) — are in **[MONETIZE.md](MONETIZE.md)**.
+
+> The paid PDFs are intentionally kept out of this public repo so they aren't free. Your store hosts and delivers them; only the free checklist is public.
 
 ## Data & honesty
 

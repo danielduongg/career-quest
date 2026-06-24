@@ -9,3 +9,9 @@ Thumbs.db
 *.log
 node_modules/
 .cache/
+
+# Paid product files — NEVER publish these (they are sold via your store).
+# The free lead-magnet checklist (CareerQuest-Free-Checklist.pdf) is intentionally NOT ignored.
+CareerQuest-Complete-Workbook.pdf
+CareerQuest-Career-Roadmaps.pdf
+CareerQuest-Certificate.pdf

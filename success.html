@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thank you! — CareerQuest</title>
+<meta name="robots" content="noindex" />
+<style>
+  :root{--bg:#f6f8fe;--bg2:#eef2fb;--card:#ffffff;--ink:#1b2150;--muted:#5b628c;--line:#e3e7f3;--accent:#0bb88f;--accent2:#5b6cf5;--shadow:0 14px 40px rgba(40,50,120,.14)}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(900px 420px at 50% -10%,#e7ecff 0%,var(--bg) 60%);color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6;min-height:100vh}
+  .wrap{max-width:680px;margin:0 auto;padding:60px 22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:44px 34px;box-shadow:var(--shadow);text-align:center}
+  .badge{font-size:54px}
+  h1{font-size:30px;margin:14px 0 8px}
+  .sub{color:var(--muted);font-size:17px;margin:0 auto 26px;max-width:520px}
+  .steps{text-align:left;max-width:520px;margin:0 auto 28px;list-style:none;padding:0;counter-reset:s}
+  .steps li{position:relative;padding:14px 0 14px 52px;border-bottom:1px solid var(--line)}
+  .steps li:last-child{border-bottom:none}
+  .steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:12px;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#06121a;display:grid;place-items:center;font-weight:800}
+  .steps b{display:block}
+  .steps span{color:var(--muted);font-size:14px}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--accent2),var(--accent));color:#06121a;text-decoration:none;padding:14px 28px;border-radius:12px;font-weight:800;font-size:15px;margin:4px}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+  .note{color:var(--muted);font-size:13px;margin-top:22px}
+  a{color:var(--accent2)}
+  .brand{font-weight:800;font-size:20px;margin-bottom:6px}.brand span{color:var(--accent)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="brand">🧭 Career<span>Quest</span></div>
+      <div class="badge">🎉</div>
+      <h1>You're in. Thank you!</h1>
+      <p class="sub">Your <b>CareerQuest Family toolkit</b> is on its way to your inbox — the complete workbook, the 32-career roadmaps booklet, the completion certificate, and the parent guide, all as printable PDFs.</p>
+
+      <ul class="steps">
+        <li><b>Check your email</b><span>Your download links were just sent. (Check spam/promotions if you don't see them in a minute.)</span></li>
+        <li><b>Open the free app</b><span>Pick a first career to explore together — it pairs with the workbook.</span></li>
+        <li><b>Print Module 1 &amp; begin</b><span>Start with "Why Most People Pick Wrong." One module per sitting works great.</span></li>
+      </ul>
+
+      <p>
+        <a class="btn" href="app/">▶ Open the app</a>
+        <a class="btn ghost" href="curriculum/">Browse the curriculum</a>
+      </p>
+
+      <p class="note">Didn't get your files? Reply to your receipt email, or reach out and we'll sort it fast.<br>
+      Covered by a 30-day money-back guarantee. CareerQuest is an educational tool, not financial or admissions advice.</p>
+    </div>
+    <p style="text-align:center;margin-top:18px"><a href="./">← Back to CareerQuest</a></p>
+  </div>
+</body>
+</html>
